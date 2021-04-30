@@ -2,7 +2,9 @@
   "name": "test-editor-electron",
   "version": "0.1.0",
   "private": true,
-  "main": "public/electron.js",
+  "main": "electron/main.js",
+  "productName": "Electron Create React App Editor",
+  "homepage": "./",
   "author": {
     "email": "krunalhingol1995@gmail.com",
     "name": "Krunal Hingol"
@@ -19,13 +21,30 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "react-start": "react-scripts start",
-    "react-build": "react-scripts build",
+    "start": "export BROWSER=none && react-scripts start",
+    "start-win": "set BROWSER=none && react-scripts start",
+    "start-electron": "export ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "start-electron-win": "set ELECTRON_START_URL=http://localhost:3000 && electron .",
+    "clean": "rm -rf build dist",
+    "clean-win": "rmdir build /S /Q & rmdir dist/S /Q",
+    "build": "react-scripts build",
+    "build-electron": "mkdir build/src && cp -r electron/. build/electron && cp -r src/shared/. build/src/shared",
+    "build-electron-win": "mkdir build/src && robocopy electron build/electron /S & robocopy src/shared build/src/shared /S",
+    "package": "electron-builder build --mac --win -c.extraMetadata.main=build/electron/main.js --publish never",
+    "package-win": "electron-builder build --win -c.extraMetadata.main=build/electron/main.js --publish never",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron-build": "electron-builder build --win -c.extraMetadata.main=build/electron.js",
-    "build": "npm run react-build && npm run electron-build",
-    "start": "concurrently -k \"SET BROWSER=none&&npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+    "eject": "react-scripts eject"
+  },
+  "build": {
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "publish": {
+      "provider": "github",
+      "repo": "electron-cra-example",
+      "owner": "johndyer24"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -46,10 +65,7 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^6.0.2",
     "electron": "^12.0.5",
     "electron-builder": "^22.10.5",
-    "electron-devtools-installer": "^3.2.0",
-    "wait-on": "^5.3.0"
   }
 }
