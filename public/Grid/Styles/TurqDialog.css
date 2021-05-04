@@ -1,0 +1,511 @@
+/* TreeGrid CSS definition, http://www.treegrid.com */
+@font-face{font-family:'RobotoLight';src:url('Roboto-Light.ttf') format('truetype') }
+@font-face{font-family:'RobotoLight';font-weight:bold;src:url('Roboto-Medium.ttf') format('truetype')}
+.TTMain{font-family:RobotoLight,sans-serif;font-style:normal;font-weight:normal;font-variant:normal}
+.TTMain *{font-family:inherit;font-style:inherit;font-weight:inherit;font-variant:inherit;text-overflow:ellipsis;word-wrap:normal}
+.TTMain,.TTMain *{font-size:13px;line-height:16px}
+.TTWide,.TTWide *{font-size:16px;line-height:20px}
+.TTGiant,.TTGiant *{font-size:20px;line-height:24px}
+.TTHeaderFont{font-size:18px;line-height:22px}
+.TTWide .TTHeaderFont{font-size:23px;line-height:28px}
+.TTGiant .TTHeaderFont{font-size:30px;line-height:36px}
+.TTLow .TTHeaderFont{font-size:15px;line-height:20px}
+.TTTiny .TTHeaderFont{font-size:13px;line-height:16px}
+.TTMessage *,.TTMenuItemText *,.TTMenuControl *,.TTPickCell *,.TTPick2CellM *,.TTPick2CellY *,.TTDialogButton *{font-size:inherit;line-height:inherit}
+.TTMessage{font-size:inherit}
+.TTMenuItemText{font-size:inherit;line-height:22px}
+.TTHigh .TTMenuItemText{line-height:26px}
+.TTBig .TTMenuItemText{line-height:34px}
+.TTSmall .TTMenuItemText{line-height:19px}
+.TTMenuControl{font-size:inherit;line-height:18px}
+.TTWide .TTMenuControl{line-height:20px}
+.TTHigh .TTMenuControl{line-height:22px}
+.TTBig .TTMenuControl{line-height:30px}
+.TTSmall .TTMenuControl{line-height:16px}
+.TTPickCell,.TTPick2CellM,.TTPick2CellY{font-size:inherit;line-height:inherit}
+.TTDialogButton{font-size:inherit;line-height:inherit}
+.TTMain b,.TTMain .GridBold{color:#6f9300;font-weight:bold}
+.TTMain i,.TTMain .GridBlue{color:#6f9300;font-style:normal}
+.TTMain em,.TTMain .GridRed{color:#a10000;font-style:normal}
+.TTMain em>b,.TTMain .GridRed .GridBold{color:#a10000}
+.TTMain s,.TTMain .GridGray{color:#828f8e;text-decoration:none}
+.TTMain s>b,.TTMain .GridGray .GridBold,.TTMain s>i,.TTMain .GridGray .GridBlue{color:#828f8e}
+.TTMain{color:#093F51}
+.TTMain *{color:inherit}
+.TTDialogButton{background:linear-gradient(#166785,#0D3645);border:1px solid #ABD7D3;border-radius:3px;color:white}
+.TTDialogButton:active{background:linear-gradient(#0D3645,#166785);color:yellow}
+.TTDialogButtonHover{color:yellow}
+.TTMenuHead{color:white;background:#56AEA7}
+ .TTMenuOuter{background:white;border:3px solid #56AEA7}
+ .TTMenuFoot{background:#E0F0F2}
+ .TTMenuEdit,.TTMenuEditEdit,.TTMenuEnum{border:1px solid #ABD7D3;background-color:white;color:black}
+ .TTMenuCaption,.TTMenuLevel{color:#00a194;text-align:center}
+ .TTMenuSeparator{border-top:1px solid #ECECEC}
+ .TTMenuHorz .TTMenuSeparator{background:#ECECEC}
+ .TTMenuVSeparator{border-right:1px solid #ECECEC}
+ .TTMenuHover{background:#FCD040}
+ .TTMenuFocus{background:#56AEA7;color:white}
+ .TTMenuFocus.TTMenuHover{background:#368E87}
+ .TTMenuHeader{border:1px solid #ABD7D3;background:white}
+ .TTPickMY{color:white;background:#56AEA7}
+ .TTPickTableParent,.TTPick2TableParent{border:3px solid #ABD7D3;border-top:0px none}
+ .TTPickFooter,.TTPick2Footer,.TTPickTimeCell{background:#E0F0F2;border:3px solid #ABD7D3;border-top:0px none}
+ .TTPickRowW{background:#E0F0F2}
+ .TTPickWN,.TTPickWNE{background:#85CDC7;color:white}
+ .TTPickOM,.TTPickOMNE{background-color:white;color:#aaaaaa;font-weight:normal}
+   .TTPickSel,.TTPick2MSel,.TTPick2YSel{background-color:#FCD040}
+ .TTPickNow{background-color:#56AEA7;color:white}
+ .TTPickNE{text-decoration:line-through}
+ .TTPickHover,.TTPick2MHover,.TTPick2YHover{background-color:#ddd}
+ .TTPickSelHover,.TTPick2MSelHover,.TTPick2YSelHover{background-color:#eeeeaa}
+ .TTPickCell{font-weight:bold}
+  .TTPick2Sep{background:#ECECEC}
+  .TTMessage,.TTPageMessage{background:white;border:3px solid #ABD7D3}
+ .TTMessageButtons,.TTProgressButtons{background:#E0F0F2}
+ .TTPrompt input{border:1px solid #ABD7D3}
+ .TTEditInput,.TTEditTextarea{color:black;background-color:transparent}
+ .TTEditHeaderInput,.TTEditHeaderTextarea{color:white}
+ .TTEditReadOnly,.TTEditTextarea.TTEditReadOnly{background-color:#EEE}
+ .TTEditHeaderInput.TTEditReadOnly,.TTEditHeaderTextarea.TTEditReadOnly{background-color:#338888}
+ .TTTipOuter{background:white;border:3px solid #ABD7D3}
+ .TTEditInput,.TTEditTextarea{border:0px none;padding:0px 3px 0px 0px;outline:none;box-sizing:content-box;resize:none}
+.TTEditTextarea{margin:0px;background:white;white-space:pre-wrap}
+.TTEditWordWrap{word-wrap:break-word;overflow-wrap:break-word}
+.TTEditInput::-ms-clear{height:13px}
+.TTEditHeaderInput,.TTEditHeaderTextarea,.TTEditHeaderInput.TTEditReadOnly,.TTEditHeaderTextarea.TTEditReadOnly{background:#005555;margin-top:5px}
+.TTWK.TTMini .TTEditNormalInput{margin-top:-1px}
+.TTEditInt,.TTEditFloat,.TTEditDate,.TTEditRight{text-align:right}
+.TTEditInt::-ms-clear,.TTEditFloat::-ms-clear,.TTEditDate::-ms-clear,.TTEditRight::-ms-clear{display:none}
+.TTWK .TTEditInt,.TTWK .TTEditFloat,.TTWK .TTEditDate,.TTWK .TTEditRight{margin-left:1px!important}
+.TTEditTab{color:white;text-align:center;padding-left:3px}
+.TTHigh.TTIE .TTEditTab{margin-top:-1px}
+.TTDisabled,.TTDisabledHard{position:absolute;z-index:264;background:white;opacity:0}
+ .TTDisabledHard{opacity:0.5}
+ .TTMessage{white-space:nowrap;text-align:center;visibility:hidden;z-index:266;position:absolute;left:0px;top:0px;padding:20px;min-width:120px}
+.TTMessageShadow{position:absolute;display:none}
+	.TTPageMessage{padding:20px}
+.TTPrompt{padding-top:30px;padding-bottom:10px}
+.TTLow .TTPrompt{padding-top:10px;padding-bottom:0px}
+.TTPrompt input{padding:5px 6px 5px 6px;display:inline-block;box-sizing:border-box;width:200px}
+.TTWide .TTPrompt input{width:250px}
+.TTGiant .TTPrompt input{width:300px}
+.TTLow .TTPrompt input{padding:2px 4px 2px 4px}
+.TTProgressCaption{font-weight:bold;margin-bottom:20px;color:#00a194}
+.TTLow .TTProgressCaption{margin-bottom:5px}
+.TTProgressText{margin-bottom:30px}
+.TTLow .TTProgressText{margin-bottom:10px}
+.TTProgressOuter{text-align:left;width:300px;margin:0px 30px 30px 30px;background:#E2EEBF}
+.TTLow .TTProgressOuter{margin:0px 10px 10px 10px;width:200px}
+.TTProgressInner{height:36px;background:#8DBB00}
+.TTLow .TTProgressInner{height:20px}
+.TTMessageButtons,.TTProgressButtons{margin:20px -20px -20px -20px;padding:15px}
+.TTLow .TTMessageButtons,.TTLow .TTProgressButtons{padding:5px}
+.TTProgressButton,.TTMessageButton{padding:4px 5px 4px 5px;margin:1px 4px 1px 4px;text-align:center;white-space:nowrap;overflow:hidden;min-width:70px}
+.TTLow .TTProgressButton,.TTLow .TTMessageButton{padding:1px 5px 1px 5px;margin:1px 3px 1px 1px}
+.TTBig .TTProgressButton,.TTBig .TTMessageButton{padding-top:6px;padding-bottom:6px}
+ .TTMenuMain{position:absolute;left:0px;top:0px;z-index:258;margin-left:-3px;margin-right:-2px}
+.TTMenuMainSpace{margin-left:0px;margin-right:0px}
+.TTMenuEnumMain{margin-left:0px;margin-right:0px}
+.TTMenuShadow{position:absolute;display:none}
+.TTMenuOuter{overflow:hidden}
+.TTMenuOuterBottom{margin-top:1px}
+.TTMenuHeader{overflow:hidden;position:absolute;z-index:258;cursor:pointer;user-select:none;-ms-user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none}
+.TTMenuHeader > div{vertical-align:middle;display:table-cell}
+.TTMenuHead{padding:2px 0px 7px 23px;text-align:center;cursor:default}
+.TTHigh .TTMenuHead{padding-top:9px;padding-bottom:15px}
+.TTLow .TTMenuHead{padding-top:0px;padding-bottom:3px}
+.TTMenuHeadText{white-space:nowrap;margin-right:45px}
+.TTWide .TTMenuHeadText{margin-right:60px}
+.TTLow .TTMenuHeadText{margin-right:35px}
+.TTMenuHorzOuter .TTMenuHead{padding:0px 4px 0px 4px}
+.TTMenuHorzOuter .TTMenuHeadText{margin:0px;white-space:normal;display:inline-block;writing-mode:tb-rl;-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg)}
+.TTMenuClose{float:right;width:44px;line-height:30px;cursor:pointer;display:none;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQoNCjxsaW5lIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI0IiB4MT0iMyIgeTE9IjMiIHgyPSIyMSIgeTI9IjIxIi8+DQo8bGluZSBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNCIgeDE9IjIxIiB5MT0iMyIgeDI9IjMiIHkyPSIyMSIvPg0KDQo8L3N2Zz4NCg==) no-repeat 7px 5px;background-size:15px 15px}
+.TTWide .TTMenuClose{background-size:20px 20px;background-position:2px 6px}
+.TTBig .TTMenuClose{background-size:24px 24px;background-position:-1px 4px}
+.TTGiant .TTMenuClose{background-position:left 9px;line-height:34px}
+.TTLow .TTMenuClose{background-size:13px 13px;line-height:20px;width:22px;background-position:2px 4px}
+.TTTiny .TTMenuClose{background-position:2px 1px}
+.TTMenuHorzOuter .TTMenuClose{width:27px}
+.TTWide .TTMenuHorzOuter .TTMenuClose{width:26px}
+.TTBig .TTMenuHorzOuter .TTMenuClose{width:25px}
+.TTGiant .TTMenuHorzOuter .TTMenuClose{width:30px;background-position:left 4px}
+.TTLow .TTMenuHorzOuter .TTMenuClose{width:19px}
+.TTTiny .TTMenuHorzOuter .TTMenuClose{width:17px}
+.TTMenuBody{cursor:default;margin:5px 1px 5px 1px;width:calc(100% - 2px)}
+.TTHigh .TTMenuBody{margin-top:15px;margin-bottom:15px}
+.TTMenuFoot{padding:7px 1px 7px 1px;text-align:center;white-space:nowrap}
+.TTHigh .TTMenuFoot{padding-top:10px;padding-bottom:10px}
+.TTBig .TTMenuFoot{padding-top:15px;padding-bottom:15px}
+.TTLow .TTMenuFoot{padding-top:5px;padding-bottom:5px}
+.TTTiny .TTMenuFoot{padding-top:2px;padding-bottom:2px}
+ .TTMenuButton{padding:4px 5px 4px 5px;margin:1px 4px 1px 4px;min-width:70px;text-align:center;white-space:nowrap;overflow:hidden}
+.TTBig .TTMenuButton{padding-top:6px;padding-bottom:6px;min-width:80px}
+.TTLow .TTMenuButton{padding:2px 2px 1px 2px;min-width:60px}
+.TTTiny .TTMenuButton{margin-left:2px;margin-right:2px}
+.TTMenuItem{margin-left:1px;margin-right:1px;padding:1px 20px 0px 20px}
+.TTLow .TTMenuItem{padding-left:5px;padding-right:5px}
+ .TTMenuCheckedIconLeft,.TTMenuCheckedIconRight{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNBQkQ3RDMiLz4NCjxsaW5lYXJHcmFkaWVudCBpZD0iRzEiIHgxPSIxMDAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPiA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTY2Nzg1Ii8+IDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBEMzY0NSIvPiA8L2xpbmVhckdyYWRpZW50Pg0KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjIyIiBoZWlnaHQ9IjIyIiBmaWxsPSJ1cmwoI0cxKSIvPg0KPHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSIxMCwxNy41IDUsMTIgNi41LDEwLjUgMTAsMTQgMTcsNiAxOSw4Ii8+DQo8L3N2Zz4NCg==) no-repeat}
+.TTMenuUncheckedIconLeft,.TTMenuUncheckedIconRight{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNBQkQ3RDMiLz4NCjxsaW5lYXJHcmFkaWVudCBpZD0iRzEiIHgxPSIxMDAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPiA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTY2Nzg1Ii8+IDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBEMzY0NSIvPiA8L2xpbmVhckdyYWRpZW50Pg0KPHJlY3QgeD0iMSIgeT0iMSIgd2lkdGg9IjIyIiBoZWlnaHQ9IjIyIiBmaWxsPSJ1cmwoI0cxKSIvPg0KPC9zdmc+DQo=) no-repeat}
+.TTMenuCheckedRadioLeft,.TTMenuCheckedRadioRight{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8Y2lyY2xlIGZpbGw9IiNBQkQ3RDMiIGN4PSIxMiIgY3k9IjEyIiByPSIxMiIvPg0KPHJhZGlhbEdyYWRpZW50IGlkPSJHMSI+IDxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzE2Njc4NSIvPiA8c3RvcCBvZmZzZXQ9IjAuMjg3NCIgc3R5bGU9InN0b3AtY29sb3I6IzE2NjU4MiIvPiA8c3RvcCBvZmZzZXQ9IjAuNTE5IiBzdHlsZT0ic3RvcC1jb2xvcjojMTQ1RDc4Ii8+IDxzdG9wIG9mZnNldD0iMC43MzExIiBzdHlsZT0ic3RvcC1jb2xvcjojMTI1MDY3Ii8+IDxzdG9wIG9mZnNldD0iMC45MzA2IiBzdHlsZT0ic3RvcC1jb2xvcjojMEUzRTRGIi8+IDxzdG9wIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6IzBEMzY0NSIvPiA8L3JhZGlhbEdyYWRpZW50Pg0KPGNpcmNsZSBmaWxsPSJ1cmwoI0cxKSIgY3g9IjEyIiBjeT0iMTIiIHI9IjExIi8+DQo8Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIxMiIgY3k9IjEyIiByPSI0Ii8+DQo8L3N2Zz4NCg==) no-repeat}
+.TTMenuUncheckedRadioLeft,.TTMenuUncheckedRadioRight{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8Y2lyY2xlIGZpbGw9IiNBQkQ3RDMiIGN4PSIxMiIgY3k9IjEyIiByPSIxMiIvPg0KPHJhZGlhbEdyYWRpZW50IGlkPSJHMSI+IDxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6IzE2Njc4NSIvPiA8c3RvcCBvZmZzZXQ9IjAuMjg3NCIgc3R5bGU9InN0b3AtY29sb3I6IzE2NjU4MiIvPiA8c3RvcCBvZmZzZXQ9IjAuNTE5IiBzdHlsZT0ic3RvcC1jb2xvcjojMTQ1RDc4Ii8+IDxzdG9wIG9mZnNldD0iMC43MzExIiBzdHlsZT0ic3RvcC1jb2xvcjojMTI1MDY3Ii8+IDxzdG9wIG9mZnNldD0iMC45MzA2IiBzdHlsZT0ic3RvcC1jb2xvcjojMEUzRTRGIi8+IDxzdG9wIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6IzBEMzY0NSIvPiA8L3JhZGlhbEdyYWRpZW50Pg0KPGNpcmNsZSBmaWxsPSJ1cmwoI0cxKSIgY3g9IjEyIiBjeT0iMTIiIHI9IjExIi8+DQo8L3N2Zz4NCg==) no-repeat}
+.TTMenuCheckedIconLeft,.TTMenuUncheckedIconLeft,.TTMenuCheckedRadioLeft,.TTMenuUncheckedRadioLeft{padding-left:20px;background-position:left center;background-size:16px 16px}
+.TTWide .TTMenuCheckedIconLeft,.TTWide .TTMenuUncheckedIconLeft,.TTWide .TTMenuCheckedRadioLeft,.TTWide .TTMenuUncheckedRadioLeft{padding-left:25px;background-size:20px 20px}
+.TTBig .TTMenuCheckedIconLeft,.TTBig .TTMenuUncheckedIconLeft,.TTBig .TTMenuCheckedRadioLeft,.TTBig .TTMenuUncheckedRadioLeft{padding-left:30px;background-size:24px 24px}
+.TTSmall .TTMenuCheckedIconLeft,.TTSmall .TTMenuUncheckedIconLeft,.TTSmall .TTMenuCheckedRadioLeft,.TTSmall .TTMenuUncheckedRadioLeft{padding-left:16px;background-size:13px 13px}
+.TTMenuCheckedIconRight,.TTMenuUncheckedIconRight,.TTMenuCheckedRadioRight,.TTMenuUncheckedRadioRight{padding-right:20px;background-position:right center;background-size:16px 16px}
+.TTWide .TTMenuCheckedIconRight,.TTWide .TTMenuUncheckedIconRight,.TTWide .TTMenuCheckedRadioRight,.TTWide .TTMenuUncheckedRadioRight{padding-right:25px;background-size:20px 20px}
+.TTBig .TTMenuCheckedIconRight,.TTBig .TTMenuUncheckedIconRight,.TTBig .TTMenuCheckedRadioRight,.TTBig .TTMenuUncheckedRadioRight{padding-right:30px;background-size:24px 24px}
+.TTSmall .TTMenuCheckedIconRight,.TTSmall .TTMenuUncheckedIconRight,.TTSmall .TTMenuCheckedRadioRight,.TTSmall .TTMenuUncheckedRadioRight{padding-right:16px;background-size:13px 13px}
+.TTMenuCursorIcon,.TTMenuHoverIcon{padding-left:0px!important}
+.TTMenuCursorIconRtl,.TTMenuHoverIconRtl{padding-left:0px!important}
+.TTMenuEnumCursorIcon,.TTMenuEnumHoverIcon{padding-left:0px!important}
+.TTWide .TTMenuEnumCursorIcon,.TTWide .TTMenuEnumHoverIcon{padding-left:4px!important}
+.TTBig .TTMenuEnumCursorIcon,.TTBig .TTMenuEnumHoverIcon{padding-left:9px!important}
+.TTLow .TTMenuEnumCursorIcon,.TTLow .TTMenuEnumHoverIcon{padding-left:15px!important}
+.TTSmall .TTMenuEnumCursorIcon,.TTSmall .TTMenuEnumHoverIcon{padding-left:10px!important}
+.TTMenuExpandedIcon{padding-left:0px!important;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQogICA8cGF0aCBzdHJva2U9IiMwRjNGNTEiIHN0cm9rZS13aWR0aD0iNHB4IiBmaWxsPSJub25lIiBkPSJNMSwxIEwxMiwxMiBMMjMsMSIvPg0KPC9zdmc+) no-repeat left calc(50% + 3px);background-size:16px 16px}
+.TTWide .TTMenuExpandedIcon{background-size:20px 20px}
+.TTBig .TTMenuExpandedIcon{background-size:24px 24px}
+.TTSmall .TTMenuExpandedIcon{background-size:13px 13px}
+.TTMenuCollapsedIcon{padding-left:0px!important;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQogICA8cGF0aCBzdHJva2U9IiMwRjNGNTEiIHN0cm9rZS13aWR0aD0iNHB4IiBmaWxsPSJub25lIiBkPSJNMSwxIEwxMiwxMiBMMSwyMyIvPg0KPC9zdmc+DQo=) no-repeat 3px calc(50% - 1px);background-size:16px 16px}
+.TTWide .TTMenuCollapsedIcon{background-size:20px 20px}
+.TTBig .TTMenuCollapsedIcon{background-size:24px 24px}
+.TTSmall .TTMenuCollapsedIcon{background-size:13px 13px}
+.TTMenuExpandedIcon > div, .TTMenuCollapsedIcon > div{padding-left:20px;text-align:left!important}
+.TTWide .TTMenuExpandedIcon > div,.TTWide .TTMenuCollapsedIcon > div{padding-left:25px}
+.TTBig .TTMenuExpandedIcon > div,.TTBig .TTMenuCollapsedIcon > div{padding-left:30px}
+.TTSmall .TTMenuExpandedIcon > div,.TTLow .TTMenuCollapsedIcon > div{padding-left:16px}
+.TTMenuNextIcon{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii01IDAgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSIjMTY1RTc2IiBzdHJva2Utd2lkdGg9IjRweCIgZmlsbD0ibm9uZSIgZD0iTTEsMSBMMTIsMTIgTDEsMjMiLz4NCjwvc3ZnPg0K) no-repeat right center;background-size:16px 16px;padding-right:20px}
+.TTWide .TTMenuNextIcon{background-size:20px 20px;padding-right:25px}
+.TTBig .TTMenuNextIcon{background-size:24px 24px;padding-right:30px}
+.TTSmall .TTMenuNextIcon{background-size:13px 13px;padding-right:16px}
+.TTMenuNextIconRtl{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii01IDAgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0cHgiIGZpbGw9Im5vbmUiIGQ9Ik0xNCwxIEwzLDEyIEwxNCwyMyIvPg0KPC9zdmc+) no-repeat left center;background-size:16px 16px;padding-left:20px}
+.TTWide .TTMenuNextIconRtl{background-size:20px 20px;padding-left:25px}
+.TTBig .TTMenuNextIconRtl{background-size:24px 24px;padding-left:30px}
+.TTSmall .TTMenuNextIconRtl{background-size:13px 13px;padding-left:16px}
+.TTMenuNextIconDown{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgLTQgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSIjMTY1RTc2IiBzdHJva2Utd2lkdGg9IjRweCIgZmlsbD0ibm9uZSIgZD0iTTMsMyBMMTIsMTIgTDIxLDMiLz4NCjwvc3ZnPg0K)}
+.TTMenuItemText{white-space:nowrap;overflow:hidden}
+.TTMenuItemText *{font-size:inherit;line-height:inherit}
+.TTMenuItemIcon{background-repeat:no-repeat;background-position:center center}
+.TTMenuItemDisabled{opacity:0.70}
+.TTMenuAlignLeft{text-align:left}
+.TTMenuAlignRight{text-align:right}
+.TTMenuAlignCenter{text-align:center}
+.TTMenuAlignJustify{text-align:justify}
+.TTMenuEnumParent{padding-left:5px}
+.TTMenuItemLeft .TTMenuEnumParent{padding-left:0px;padding-right:5px}
+.TTMenuEnum,.TTMenuEnumHeaderLeft{white-space:nowrap;overflow:hidden;background-repeat:no-repeat;background-size:16px 16px;background-position:3px center}
+.TTMenuEnum{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgLTQgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSIjMEYzRjUxIiBzdHJva2Utd2lkdGg9IjRweCIgZmlsbD0ibm9uZSIgZD0iTTMsMyBMMTIsMTIgTDIxLDMiLz4NCjwvc3ZnPg0K);padding-left:24px}
+.TTMenuItemLeft .TTMenuEnum{padding-right:3px}
+.TTMenuEnumHeaderLeft{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgLTQgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSIjMEYzRjUxIiBzdHJva2Utd2lkdGg9IjRweCIgZmlsbD0ibm9uZSIgZD0iTTMsMTIgTDEyLDMgTDIxLDEyIi8+DQo8L3N2Zz4NCg==);padding:1px 0px 0px 24px;cursor:default}
+.TTWide .TTMenuEnum,.TTWide .TTMenuEnumHeaderLeft{background-size:20px 20px;padding-left:28px}
+.TTBig .TTMenuEnum,.TTBig .TTMenuEnumHeaderLeft{background-size:24px 24px;padding-left:33px}
+.TTSmall .TTMenuEnum,.TTSmall .TTMenuEnumHeaderLeft{background-size:13px 13px;padding-left:19px}
+.TTMenuEnumParent,.TTMenuEnum,.TTMenuEnumHeaderLeft{width:90px}
+.TTWide .TTMenuEnumParent,.TTWide .TTMenuEnum,.TTWide .TTMenuEnumHeaderLeft{width:120px}
+.TTGiant .TTMenuEnumParent,.TTGiant .TTMenuEnum,.TTGiant .TTMenuEnumHeaderLeft{width:150px}
+.TTMenuEditParent{padding-left:5px}
+.TTMenuItemLeft .TTMenuEditParent{padding-left:0px;padding-right:5px}
+.TTMenuEdit{padding-left:3px;padding-right:3px;overflow:hidden;white-space:nowrap}
+.TTMenuEditParent,.TTMenuEdit{width:30px}
+.TTMenuEditParentPDFName,.TTMenuEditParentPDFName > .TTMenuEdit,.TTMenuEditParentExportName,.TTMenuEditParentExportName > .TTMenuEdit{width:104px}
+.TTWide .TTMenuEditParent,.TTWide .TTMenuEdit{width:50px}
+.TTWide .TTMenuEditParentPDFName,.TTWide .TTMenuEditParentPDFName > .TTMenuEdit,.TTWide .TTMenuEditParentExportName,.TTWide .TTMenuEditParentExportName > .TTMenuEdit{width:139px}
+.TTBig .TTMenuEditParentPDFName,.TTBig .TTMenuEditParentPDFName > .TTMenuEdit,.TTBig .TTMenuEditParentExportName,.TTBig .TTMenuEditParentExportName > .TTMenuEdit{width:144px}
+.TTGiant .TTMenuEditParent,.TTGiant .TTMenuEdit{width:60px}
+.TTGiant .TTMenuEditParentPDFName,.TTGiant .TTMenuEditParentPDFName > .TTMenuEdit,.TTGiant .TTMenuEditParentExportName,.TTGiant .TTMenuEditParentExportName > .TTMenuEdit{width:174px}
+.TTSmall .TTMenuEditParent,.TTSmall .TTMenuEdit{width:46px}
+.TTSmall .TTMenuEditParentPDFName,.TTSmall .TTMenuEditParentPDFName > .TTMenuEdit,.TTSmall .TTMenuEditParentExportName,.TTSmall .TTMenuEditParentExportName > .TTMenuEdit{width:100px}
+.TTMenuEditMulti{white-space:pre-wrap}
+input.TTMenuEditInput,textarea.TTMenuEditTextarea{border:0px none;margin:0px 1px 0px 0px;padding:0px;height:18px;outline:none;background:transparent;resize:none}
+.TTHigh .TTMenuEditInput,.TTHigh .TTMenuEditTextarea{height:22px}
+.TTGiant .TTMenuEditInput,.TTGiant .TTMenuEditTextarea{height:30px}
+.TTSmall .TTMenuEditInput,.TTSmall .TTMenuEditTextarea{height:15px}
+.TTMenuEditInput::-ms-clear{height:13px}
+.TTMenuEditInt,.TTMenuEditFloat,.TTMenuEditDate{text-align:right}
+ .TTMenuCaption{padding:8px 2px 2px 2px}
+.TTHigh .TTMenuCaption{padding-top:16px;padding-bottom:8px}
+.TTMenuHorz .TTMenuCaption{padding:1px 6px 0px 6px}
+.TTHigh .TTMenuHorz .TTMenuCaption{padding:1px 10px 0px 10px}
+.TTMenuSeparator{margin:8px 10px 7px 10px;height:1px;overflow:hidden}
+.TTBig .TTMenuSeparator{margin:10px 10px 10px 10px}
+.TTLow .TTMenuSeparator{margin:5px 5px 4px 5px}
+.TTTiny .TTMenuSeparator{margin:4px 3px 2px 3px}
+.TTMenuHorz .TTMenuSeparator{margin:0px;border:10px solid white;border-left:8px solid white;border-right:7px solid white}
+.TTBig .TTMenuHorz .TTMenuSeparator{border-width:10px}
+.TTLow .TTMenuHorz .TTMenuSeparator{border-width:5px}
+.TTTiny .TTMenuHorz .TTMenuSeparator{border-width:3px}
+.TTMenuHorz .TTMenuSeparator > div{overflow:hidden;width:1px}
+.TTMenuVSeparator{width:1px;font-size:0px}
+ .TTPickMain{position:absolute;left:0px;top:0px;z-index:258}
+.TTPickShadow{position:absolute;display:none}
+.TTPickOuter{border:0px none;padding:0px;overflow:hidden}
+.TTPickBody{cursor:default;padding:0px;margin:0px;width:100%}
+.TTWide .TTPickBody{margin:0px}
+.TTPickHeader{position:absolute;z-index:258;border:1px solid #ABD7D3;background:white;overflow:hidden;cursor:pointer;}
+.TTPickHeaderBottom{border-bottom:0px none}
+.TTPickHeaderTop{border-top:0px none}
+.TTPickHead,.TTPickFoot{background:white;padding:1px 0px 1px 5px;color:white;cursor:default}
+.TTPickClose{display:none}
+.TTPickMY{padding:5px 0px 7px 0px;cursor:default;text-align:center}
+.TTHigh .TTPickMY{padding:12px 0px 14px 0px}
+.TTLow .TTPickMY{padding:3px 0px 3px 0px}
+.TTPickMYDown,.TTPickMYUp{padding-right:18px;background-size:15px 15px;background-position:right calc(50% - 1px);background-repeat:no-repeat;cursor:pointer}
+.TTPickMYDown{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgLTYgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0cHgiIGZpbGw9Im5vbmUiIGQ9Ik0xLDEgTDEyLDEyIEwyMywxIi8+DQo8L3N2Zz4NCg==)}
+.TTPickMYUp{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgLTQgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0cHgiIGZpbGw9Im5vbmUiIGQ9Ik0xLDE0IEwxMiwzIEwyMywxNCIvPg0KPC9zdmc+DQo=)}
+.TTWide .TTPickMYDown,.TTWide .TTPickMYUp{padding-right:22px;background-size:20px 20px}
+.TTBig .TTPickMYDown,.TTBig .TTPickMYUp{padding-right:26px;background-size:24px 24px}
+.TTLow .TTPickMYDown,.TTLow .TTPickMYUp{padding-right:15px;background-size:13px 13px}
+.TTPickMYRtl{padding-right:0px;padding-left:13px}
+.TTPickBL{float:left;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii01IDAgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0cHgiIGZpbGw9Im5vbmUiIGQ9Ik0xNCwxIEwzLDEyIEwxNCwyMyIvPg0KPC9zdmc+) no-repeat 5px 9px}
+.TTPickBR{float:right;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii01IDAgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0cHgiIGZpbGw9Im5vbmUiIGQ9Ik0xLDEgTDEyLDEyIEwxLDIzIi8+DQo8L3N2Zz4NCg==) no-repeat right 5px top 9px}
+.TTPickBL,.TTPickBR{width:24px;height:24px;padding:0px;background-size:15px 15px;overflow:hidden;cursor:pointer;display:none}
+.TTWide .TTPickBL,.TTWide .TTPickBR{background-size:20px 20px;background-position-y:10px;height:34px}
+.TTHigh .TTPickBL,.TTHigh .TTPickBR{background-position-y:18px;height:42px}
+.TTBig .TTPickBL,.TTBig .TTPickBR{background-size:24px 24px;background-position-y:15px;height:42px}
+.TTGiant .TTPickBL,.TTGiant .TTPickBR{background-position-y:19px;height:46px}
+.TTLow .TTPickBL,.TTLow .TTPickBR{background-size:13px 13px;background-position-y:7px}
+.TTTiny .TTPickBL,.TTTiny .TTPickBR{background-position-y:5px;height:18px}
+.TTPickTableParent{border-top:0px none;clear:both}
+.TTPickTable{table-layout:fixed;width:0px}
+.TTPickRow{background:white}
+.TTPickCell{width:36px;font-size:inherit;line-height:inherit}
+.TTLow .TTPickCell{width:28px}
+.TTWide .TTPickCell{width:42px}
+.TTPickWDN{margin:2px 3px 2px 3px;padding:1px;font-weight:bold;line-height:22px;text-align:center;cursor:default}
+.TTHigh .TTPickWDN{line-height:30px}
+.TTPickHover,.TTPickSelHover,.TTPickWD,.TTPickSa,.TTPickSu,.TTPickSel,.TTPickNow,.TTPickWDNE,.TTPickSaNE,.TTPickSuNE,.TTPickSelNE,.TTPickNowNE,.TTPickOM,.TTPickOMNE{margin:2px;padding:0px 2px 0px 2px;line-height:22px;text-align:center;cursor:pointer;}
+.TTPickWN,.TTPickWNE{padding:2px 4px 2px 4px;line-height:22px;text-align:center;cursor:pointer}
+.TTHigh .TTPickCell>div{line-height:26px}
+.TTBig .TTPickCell>div{line-height:30px}
+.TTLow .TTPickCell>div{line-height:16px}
+.TTPickWNE{cursor:default}
+.TTPickNE{cursor:default}
+.TTPickEmpty{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC03IDE2IDE2Ij4NCiAgIDxwYXRoIHN0cm9rZT0iIzExNDE1MiIgc3Ryb2tlLXdpZHRoPSIycHgiIGZpbGw9Im5vbmUiIGQ9Ik0wLDEgTDQsMSBNNiwxIEwxMCwxIi8+DQo8L3N2Zz4NCg==) no-repeat center center;background-size:16px 16px;cursor:pointer;height:17px}
+.TTWide .TTPickEmpty{background-size:20px 20px;height:20px}
+.TTBig .TTPickEmpty{background-size:24px 24px;height:24px}
+.TTLow .TTPickEmpty{background-size:14px 14px;height:14px}
+.TTPick2TableParent{padding-top:2px;padding-bottom:2px;display:block;overflow:hidden;clear:both}
+.TTHigh .TTPick2TableParent{padding-top:0px;padding-bottom:0px}
+.TTPick2Table{table-layout:fixed;width:0px;margin-left:3px;margin-right:3px}
+.TTPick2CellM{width:86px}
+.TTLow .TTPick2CellM{width:68px}
+.TTWide .TTPick2CellM{width:105px}
+.TTPick2CellY{width:53px}
+.TTLow .TTPick2CellY{width:40px}
+.TTWide .TTPick2CellY{width:58px}
+.TTPick2CellSep{width:5px}
+.TTLow .TTPick2CellSep{width:2px}
+.TTPick2SepH{display:none}
+.TTPick2M,.TTPick2Y{margin:2px;padding:3px 1px 3px 1px;line-height:20px;cursor:pointer;text-align:center;overflow:hidden}
+.TTBig .TTPick2M,.TTBig .TTPick2Y{line-height:30px}
+.TTLow .TTPick2M,.TTLow .TTPick2Y{line-height:17px;padding-top:1px;padding-bottom:1px}
+.TTPick2Sep{height:30px;width:1px;overflow:hidden;margin-left:2px;margin-right:2px}
+.TTHigh .TTPick2Sep{height:35px}
+.TTBig .TTPick2Sep{height:38px}
+.TTLow .TTPick2Sep{height:22px}
+.TTPick2BL,.TTPick2BR{width:53px;cursor:pointer;height:26px;background-repeat:no-repeat;background-position:center 6px;background-size:15px 15px}
+.TTPick2BL{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii01IDAgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSIjODhBMEE4IiBzdHJva2Utd2lkdGg9IjRweCIgZmlsbD0ibm9uZSIgZD0iTTE0LDEgTDMsMTIgTDE0LDIzIi8+DQo8L3N2Zz4=)}
+.TTPick2BR{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii01IDAgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSIjODhBMEE4IiBzdHJva2Utd2lkdGg9IjRweCIgZmlsbD0ibm9uZSIgZD0iTTEsMSBMMTIsMTIgTDEsMjMiLz4NCjwvc3ZnPg==)}
+.TTWide .TTPick2BL,.TTWide .TTPick2BR{background-position:center 2px;background-size:20px 20px}
+.TTHigh .TTPick2BL,.TTHigh .TTPick2BR{height:37px;background-position:center 10px}
+.TTBig .TTPick2BL,.TTBig .TTPick2BR{height:38px;background-position:center 10px;background-size:24px 24px}
+.TTLow .TTPick2BL,.TTLow .TTPick2BR{height:16px;width:40px;background-position:center 3px;background-size:13px 13px}
+ .TTPickTimeCell{padding:13px 14px 13px 0px;margin-top:-3px;text-align:right;line-height:0px;height:16px}
+.TTWide .TTPickTimeCell{height:20px;padding-right:16px}
+.TTHigh .TTPickTimeCell{padding-top:16px;padding-bottom:16px}
+.TTBig .TTPickTimeCell{padding-top:23px;padding-bottom:23px}
+.TTGiant .TTPickTimeCell{height:24px}
+.TTLow .TTPickTimeCell{padding-top:8px;padding-bottom:8px;padding-right:10px}
+.TTTiny .TTPickTimeCell{padding-top:5px;padding-bottom:5px}
+.TTPickTime{font-weight:bold;margin:0px;padding:0px;border:0px none;white-space:nowrap;text-align:right;outline:none;background:transparent}
+.TTPickFooter,.TTPick2Footer{padding:7px 0px 7px 0px;cursor:default;text-align:center;margin-top:-3px}
+.TTHigh .TTPickFooter,.TTHigh .TTPick2Footer{padding-top:10px;padding-bottom:10px}
+.TTBig .TTPickFooter,.TTBig .TTPick2Footer{padding-top:15px;padding-bottom:15px}
+.TTLow .TTPickFooter,.TTLow .TTPick2Footer{padding-top:5px;padding-bottom:5px}
+.TTTiny .TTPickFooter,.TTTiny .TTPick2Footer{padding-top:2px;padding-bottom:2px}
+.TTPickButton{padding:4px 5px 4px 5px;margin:1px 4px 1px 4px;width:70px;text-align:center;white-space:nowrap;overflow:hidden}
+.TTLow .TTPickButton{padding-top:1px;padding-bottom:1px;width:55px;margin-left:3px;margin-right:3px}
+.TTWide .TTPickButton{width:85px}
+.TTBig .TTPickButton{padding-top:6px;padding-bottom:6px}
+.TTEditParent{position:absolute;z-index:258;overflow:hidden}
+.TTEdit,.TTEditInline{padding:2px 4px 2px 4px;border:1px solid #DDD;border-top:1px solid #666;border-left:1px solid #666;background:white;white-space:nowrap;overflow:hidden;}
+.TTEditInline{display:inline-block;vertical-align:bottom}
+.TTEditMulti{white-space:pre-wrap}
+.TTEnumControl,.TTEnumInline,.TTEnumHeader{cursor:pointer;background:white url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgLTQgMjQgMjQiPg0KICAgPHBhdGggc3Ryb2tlPSIjMEYzRjUxIiBzdHJva2Utd2lkdGg9IjRweCIgZmlsbD0ibm9uZSIgZD0iTTMsMyBMMTIsMTIgTDIxLDMiLz4NCjwvc3ZnPg0K) no-repeat;background-size:15px 15px}
+.TTEnumControl,.TTEnumInline{background-position:2px 5px;padding:2px 4px 2px 20px;border:1px solid #DDD;border-top:1px solid #666;border-left:1px solid #666;overflow:hidden}
+.TTEnumInline{display:inline-block;vertical-align:bottom}
+.TTEnumHeader{background-position:2px 6px;padding:3px 4px 2px 20px}
+.TTMouseOrig{background:yellow!important;opacity:0.5}
+.TTMouseDragObject{position:absolute;z-index:260;background:#888;opacity:0.5}
+.TTFocus{border:1px solid #AAF;border-top:1px solid #00F;border-left:1px solid #00F;background-color:#EEE}
+ .TTTipMain{position:absolute;left:0px;top:0px;z-index:262;visibility:hidden}
+.TTTipOuter{padding:10px;overflow:hidden;cursor:default}
+.TTTipBody{white-space:nowrap;overflow:hidden}
+.TTTipShadow{position:absolute;display:none}
+.TTDragObject{z-index:300;margin-left:15px;margin-top:10px;background:white;border:3px solid #ABD7D3;padding:10px;padding:10px;}
+.TTChart{padding:5px}
+.TTChartInner{background:white;width:100%}
+.TTChartLayer{overflow:hidden;height:1000px}
+.TTChartAxisY{background:black;height:1px;overflow:hidden}
+.TTChartAxisYLabel{overflow:hidden}
+.TTChartAxisYText{margin-right:5px;margin-top:12px;text-align:right}
+.TTChartAxisX{width:1px;overflow:hidden;background:black}
+.TTChartAxisXLabel{overflow:hidden}
+.TTChartAxisXText{text-align:center}
+.TTChartCaption{text-align:center;margin-top:3px}
+.TTChartPoint{background-repeat:no-repeat;background-size:9px 9px;background-position:11px 11px;width:32px;height:32px;overflow:hidden}
+.TTChartPoint1{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCA5IDkiPg0KPGNpcmNsZSBmaWxsPSIjMzMzIiBjeD0iNC41IiBjeT0iNC41IiByPSI0LjUiLz4NCjwvc3ZnPg0K)}
+.TTChartPoint2{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCA5IDkiPg0KPGNpcmNsZSBmaWxsPSIjQjIwMDAwIiBjeD0iNC41IiBjeT0iNC41IiByPSI0LjUiLz4NCjwvc3ZnPg0K)}
+.TTChartPoint3{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCA5IDkiPg0KPGNpcmNsZSBmaWxsPSIjMjQ4REIwIiBjeD0iNC41IiBjeT0iNC41IiByPSI0LjUiLz4NCjwvc3ZnPg0K)}
+.TTChartPoint4{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCA5IDkiPg0KPGNpcmNsZSBmaWxsPSIjMDA3MjAwIiBjeD0iNC41IiBjeT0iNC41IiByPSI0LjUiLz4NCjwvc3ZnPg0K)}
+.TTChartPoint5{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCA5IDkiPg0KPGNpcmNsZSBmaWxsPSIjRDkwMEQ5IiBjeD0iNC41IiBjeT0iNC41IiByPSI0LjUiLz4NCjwvc3ZnPg0K)}
+.TTChartPoint6{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCA5IDkiPg0KPGNpcmNsZSBmaWxsPSIjQTdBNzAwIiBjeD0iNC41IiBjeT0iNC41IiByPSI0LjUiLz4NCjwvc3ZnPg0K)}
+.TTChartPoint7{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCA5IDkiPg0KPGNpcmNsZSBmaWxsPSIjMDBCQkJCIiBjeD0iNC41IiBjeT0iNC41IiByPSI0LjUiLz4NCjwvc3ZnPg0K)}
+.TTChartPoint8{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCA5IDkiPg0KPGNpcmNsZSBmaWxsPSIjN0M3QzdDIiBjeD0iNC41IiBjeT0iNC41IiByPSI0LjUiLz4NCjwvc3ZnPg0K)}
+.GridDebugTag,.GridDebugTagMax{overflow:auto;overflow-y:scroll;border:1px solid black;background:#DDD}
+.GridDebugTag,.GridDebugTagMax,.GridDebugButtons,.GridDebugButtonsMax{position:fixed;z-index:256;left:5px;right:5px;bottom:5px;height:200px;padding:4px}
+.GridDebugTagMax,.GridDebugButtonsMax{top:5px;height:auto}
+.GridDebugButtons,.GridDebugButtonsMax{text-align:right;margin-right:25px;width:150px;left:auto}
+.GridDebugButton{font-size:10px;width:40px;padding:0px}
+.GridDebugTitle{font-size:10px;color:#00a194;font-style:normal;font-weight:normal}
+.GridDebugMark{font-weight:bold}
+.GridDebugStop{font-size:18px;font-weight:bold;color:red}
+.GridDebugError{font-size:12px;color:red}
+.GridDebugWarning{font-size:12px;color:#A60}
+.GridDebugList{font-size:10px;color:#888}
+.GridDebugInfo{font-size:12px}
+.TTAnimateOverflow{overflow:hidden}
+@keyframes TTExpandH{from{height:0px}
+ }
+@keyframes TTCollapseH{to{height:0px}
+ }
+.TTAnimateTransparent{opacity:0}
+@keyframes TTShow{from{opacity:0}
+ to{opacity:1}
+ }
+@keyframes TTHide{from{opacity:1}
+ to{opacity:0}
+ }
+.TTAnimateHidden{display:none}
+.TTAnimateVisible{display:inherit}
+.TTAnimateLeftTop{overflow:hidden;transform-origin:0% 0%}
+.TTAnimateCenterTop{overflow:hidden;transform-origin:50% 0%}
+.TTAnimateRightTop{overflow:hidden;transform-origin:100% 0%}
+.TTAnimateLeftBottom{overflow:hidden;transform-origin:0% 100%}
+.TTAnimateRightBottom{overflow:hidden;transform-origin:100% 100%}
+.TTAnimateCenterBottom{overflow:hidden;transform-origin:50% 100%}
+.TTAnimateLeftCenter{overflow:hidden;transform-origin:0% 50%}
+.TTAnimateRightCenter{overflow:hidden;transform-origin:100% 50%}
+.TTAnimateCenterCenter{overflow:hidden;transform-origin:50% 50%}
+@keyframes TTZoomInH{from{height:0px;transform:scale(1,0)}
+ to{transform:scale(1,1)}
+ }
+@keyframes TTZoomOutH{from{transform:scale(1,1)}
+ to{transform:scale(1,0);height:0px}
+ }
+@keyframes TTZoomInY{from{transform:scale(1,0)}
+ to{transform:scale(1,1)}
+ }
+@keyframes TTZoomOutY{from{transform:scale(1,1)}
+ to{transform:scale(1,0)}
+ }
+@keyframes TTZoomInX{from{transform:scale(0,1)}
+ to{transform:scale(1,1)}
+ }
+@keyframes TTZoomOutX{from{transform:scale(1,1)}
+ to{transform:scale(0,1)}
+ }
+@keyframes TTZoomIn{from{transform:scale(0)}
+ to{transform:scale(1)}
+ }
+@keyframes TTZoomOut{from{transform:scale(1)}
+ to{transform:scale(0)}
+ }
+@keyframes TTRotateX90{0%{transform:rotateX(0deg)}
+ 50%{transform:rotateX(90deg)}
+ 100%{transform:rotateX(0deg)}
+ }
+@keyframes TTRotateX90To{from{transform:rotateX(0deg)}
+ to{transform:rotateX(90deg)}
+ }
+@keyframes TTRotateX90From{from{transform:rotateX(90deg)}
+ to{transform:rotateX(0deg)}
+ }
+@keyframes TTRotateY90{0%{transform:rotateY(0deg)}
+ 50%{transform:rotateY(90deg)}
+ 100%{transform:rotateY(0deg)}
+ }
+@keyframes TTRotateY90To{from{transform:rotateY(0deg)}
+ to{transform:rotateY(90deg)}
+ }
+@keyframes TTRotateY90From{from{transform:rotateY(90deg)}
+ to{transform:rotateY(0deg)}
+ }
+@keyframes TTFocus{0%{color:inherit}
+ 50%{color:red}
+ 100%{color:inherit}
+ }
+@keyframes TTCopy{0%{transform:translateX(0px)}
+ 25%{transform:translateX(1px)}
+ 75%{transform:translateX(-1px)}
+ 100%{transform:translateX(0px)}
+ }
+@keyframes TTOpacityBlink{0%{opacity:1}
+ 50%{opacity:0.2}
+ 100%{opacity:1}
+ }
+@keyframes TTBackgroundBlink{0%{background-color:#FFF}
+ 50%{background-color:#888}
+ 100%{background-color:#FFF}
+ }
+.TTMark{background-color:#AAA!important}
+@keyframes TTMark{0%{background-color:#FFF}
+ 25%{background-color:#AAA}
+ 75%{background-color:#AAA}
+ 100%{background-color:#FFF}
+ }
+@keyframes TTHighlight{0%{background-color:#FFF}
+ 25%{background-color:#AAA}
+ 50%{background-color:#FFF}
+ 75%{background-color:#AAA}
+ 100%{background-color:#FFF}
+ }
+@keyframes TTHighlightDeselect{0%{background-color:#FFF}
+ 25%{background-color:#FF0}
+ 50%{background-color:#FFF}
+ 75%{background-color:#FF0}
+ 100%{background-color:#FFF}
+ }
+@keyframes TTHighlightSelect{0%{background-color:#FF0}
+ 25%{background-color:#FFF}
+ 50%{background-color:#FF0}
+ 75%{background-color:#FFF}
+ 100%{background-color:#FF0}
+ }
+@keyframes TTHighlightDelete{0%{background-color:#FAA}
+ 25%{background-color:#FFF}
+ 50%{background-color:#FAA}
+ 75%{background-color:#FFF}
+ 100%{background-color:#FAA}
+ }
+@keyframes TTHighlightMove{0%{background-color:#AEE}
+ 25%{background-color:#FFF}
+ 50%{background-color:#AEE}
+ 75%{background-color:#FFF}
+ 100%{background-color:#AEE}
+ }
+@keyframes TTHighlightAdd{0%{background-color:#AFA}
+ 25%{background-color:#FFF}
+ 50%{background-color:#AFA}
+ 75%{background-color:#FFF}
+ 100%{background-color:#AFA}
+ }
+@keyframes TTHighlightChange{0%{background-color:#AAF}
+ 25%{background-color:#FFF}
+ 50%{background-color:#AAF}
+ 75%{background-color:#FFF}
+ 100%{background-color:#AAF}
+ }
+.GridDisabled{position:absolute;z-index:256;background:white;opacity:0.5}
+ .TTDialogLoaded{border:1px solid black!important}

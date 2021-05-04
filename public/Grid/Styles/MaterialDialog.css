@@ -1,0 +1,526 @@
+/* TreeGrid CSS definition, http://www.treegrid.com */
+@font-face{font-family:'RobotoRegular';src:url('Roboto-Regular.ttf') format('truetype') }
+@font-face{font-family:'RobotoRegular';font-weight:bold;src:url('Roboto-Bold.ttf') format('truetype')}
+.TMMain{font-family:RobotoRegular,sans-serif;font-style:normal;font-weight:normal;font-variant:normal}
+.TMMain *{font-family:inherit;font-style:inherit;font-weight:inherit;font-variant:inherit;text-overflow:ellipsis;word-wrap:normal}
+.TMMain,.TMMain *{font-size:13px;line-height:16px}
+.TMWide,.TMWide *{font-size:16px;line-height:20px}
+.TMGiant,.TMGiant *{font-size:20px;line-height:24px}
+.TMMessage *,.TMMenuItemText *,.TMMenuControl *,.TMPickCell *,.TMPick2CellM *,.TMPick2CellY *,.TMDialogButton *{font-size:inherit;line-height:inherit}
+.TMMessage{font-size:inherit}
+.TMMenuItemText{font-size:inherit;line-height:22px}
+.TMHigh .TMMenuItemText{line-height:26px}
+.TMBig .TMMenuItemText{line-height:34px}
+.TMSmall .TMMenuItemText{line-height:19px}
+.TMMenuControl{font-size:inherit;line-height:18px}
+.TMWide .TMMenuControl{line-height:20px}
+.TMHigh .TMMenuControl{line-height:22px}
+.TMBig .TMMenuControl{line-height:30px}
+.TMSmall .TMMenuControl{line-height:16px}
+.TMPickCell,.TMPick2CellM,.TMPick2CellY{font-size:inherit;line-height:inherit}
+.TMDialogButton{font-size:inherit;line-height:inherit}
+.TMMain b,.TMMain .GridBold{color:#2196F3;font-weight:bold}
+.TMMain i,.TMMain .GridBlue{color:#2196F3;font-style:normal}
+.TMMain em,.TMMain .GridRed{color:#EA4647;font-style:normal}
+.TMMain em>b,.TMMain .GridRed .GridBold{color:#EA4647}
+.TMMain s,.TMMain .GridGray{color:#999;text-decoration:none}
+.TMMain s>b,.TMMain .GridGray .GridBold,.TMMain s>i,.TMMain .GridGray .GridBlue{color:#999}
+.TMMain{color:#7F7F7F}
+.TMMain *{color:inherit}
+.TMDialogButton{background:white;border:1px solid #6B6B6B;border-radius:3px}
+.TMDialogButtonOk,.TMDialogButtonYes{background:#2196F3;border:1px solid #2196F3;color:white}
+.TMDialogButton:active{background:#E2E2E2}
+.TMDialogButtonHover{color:black}
+.TMDialogButtonOkHover,.TMDialogButtonYesHover{color:yellow}
+.TMDialogButtonOk:active,.TMDialogButtonYes:active{background:#0176C3;border:1px solid #0176C3}
+.TMMenuMain{box-shadow:0px 0px 10px -2px #AAA}
+.TMMenuHead{color:#3A95D5;font-weight:bold;border-bottom:1px solid #E2E2E2}
+ .TMMenuHorzOuter .TMMenuHead{border-bottom:0px none;border-right:1px solid #E2E2E2}
+ .TMMenuOuter{background:white}
+ .TMMenuFoot{background:white;border-top:1px solid #E2E2E2}
+ .TMMenuEdit,.TMMenuEditEdit,.TMMenuEnum{border:1px solid #E2E2E2;background-color:white;border-radius:3px;color:black}
+ .TMMenuCaption,.TMMenuLevel{font-weight:bold;text-align:center}
+ .TMMenuSeparator{border-top:1px solid #E2E2E2}
+ .TMMenuHorz .TMMenuSeparator{background:#E2E2E2}
+ .TMMenuVSeparator{border-right:1px solid #E2E2E2}
+ .TMMenuHover{background:#F4F4F4}
+ .TMMenuFocus{background:#F4F4F4;color:#2196f3}
+ .TMMenuFocus.TMMenuHover{background:#EAEAEA}
+ .TMMenuHeader{background:white}
+ .TMPickMY{border-bottom:1px solid #E2E2E2}
+  .TMPickFooter,.TMPick2Footer,.TMPickTimeCell{border-top:1px solid #E2E2E2}
+  .TMPickRowW .TMPickCell{padding-top:5px}
+ .TMPickWDN{color:#2196f3;font-weight:bold}
+ .TMPickRowW .TMPickCell:first-child{border-right:1px solid #E2E2E2}
+ .TMPickWN,.TMPickWNE{border-right:1px solid #E2E2E2;color:#2196f3;font-weight:bold}
+ .TMPickOM,.TMPickOMNE{color:#ccc}
+   .TMPickSel,.TMPick2MSel,.TMPick2YSel{background-color:#F4F4F4;color:#2196f3}
+ .TMPickNow{font-weight:bold;color:black}
+ .TMPickNE{text-decoration:line-through}
+ .TMPickHover,.TMPick2MHover,.TMPick2YHover{background-color:#F4F4F4}
+ .TMPickSelHover,.TMPick2MSelHover,.TMPick2YSelHover{background-color:#EAEAEA;color:#2196f3}
+   .TMPick2Sep{background:#ECECEC}
+  .TMMessage,.TMPageMessage{background:white;box-shadow:0px 0px 10px 0px #AAA}
+ .TMMessageButtons,.TMProgressButtons{background:white}
+ .TMPrompt input{border:1px solid #E2E2E2;border-radius:3px}
+ .TMEditInput,.TMEditTextarea{color:black;background-color:transparent}
+ .TMEditHeaderInput,.TMMain .TMEditHeaderTextarea{background-color:#2196F3;color:white}
+ .TMEditReadOnly,.TMEditTextarea.TMEditReadOnly{background-color:#EEE}
+ .TMEditHeaderInput.TMEditReadOnly,.TMEditHeaderTextarea.TMEditReadOnly{background-color:#2196F3}
+ .TMTipOuter,.TMDragObject{background:white;box-shadow:1px 3px 10px 1px #AAA}
+ .TMEditInput,.TMEditTextarea{border:0px none;padding:0px 3px 0px 0px;outline:none;box-sizing:content-box;resize:none}
+.TMEditTextarea{margin:0px;background:white;white-space:pre-wrap}
+.TMEditWordWrap{word-wrap:break-word;overflow-wrap:break-word}
+.TMEditInput::-ms-clear{height:13px}
+.TMEditInt,.TMEditFloat,.TMEditDate,.TMEditRight{text-align:right}
+.TMEditInt::-ms-clear,.TMEditFloat::-ms-clear,.TMEditDate::-ms-clear,.TMEditRight::-ms-clear{display:none}
+.TMWK .TMEditInt,.TMWK .TMEditFloat,.TMWK .TMEditDate,.TMWK .TMEditRight{margin-left:1px!important}
+.TMEditTab{text-align:center;font-weight:bold}
+.TMDisabled,.TMDisabledHard{position:absolute;z-index:264;background:white;opacity:0}
+ .TMDisabledHard{opacity:0.5}
+ .TMMessage{white-space:nowrap;text-align:center;visibility:hidden;z-index:266;position:absolute;left:0px;top:0px;padding:20px;min-width:120px}
+.TMMessageShadow{position:absolute;display:none}
+	.TMPageMessage{padding:20px}
+.TMPrompt{padding-top:30px;padding-bottom:10px}
+.TMLow .TMPrompt{padding-top:10px;padding-bottom:0px}
+.TMPrompt input{padding:5px 6px 5px 6px;display:inline-block;box-sizing:border-box;width:200px}
+.TMWide .TMPrompt input{width:250px}
+.TMGiant .TMPrompt input{width:300px}
+.TMLow .TMPrompt input{padding:2px 4px 2px 4px}
+.TMProgressCaption{font-weight:bold;margin-bottom:15px;padding-bottom:15px;border-bottom:1px solid #E2E2E2}
+.TMLow .TMProgressCaption{margin-bottom:5px;padding-bottom:5px}
+.TMProgressText{margin-bottom:15px}
+.TMLow .TMProgressText{margin-bottom:10px}
+.TMProgressOuter{text-align:left;width:300px;margin:0px 30px 10px 30px;background:#E2E2E2;border-radius:5px}
+.TMLow .TMProgressOuter{margin:0px 10px 10px 10px;width:200px}
+.TMProgressInner{height:8px;background:#2196F3;border-radius:5px}
+.TMMessageButtons,.TMProgressButtons{margin:10px -20px -20px -20px;padding:15px}
+.TMLow .TMMessageButtons,.TMLow .TMProgressButtons{padding:5px}
+.TMProgressButton,.TMMessageButton{padding:4px 5px 4px 5px;margin:1px 4px 1px 4px;text-align:center;white-space:nowrap;overflow:hidden;min-width:70px}
+.TMHigh .TMProgressButton,.TMHigh .TMMessageButton{padding-top:6px;padding-bottom:5px}
+.TMBig .TMProgressButton,.TMBig .TMMessageButton{padding-top:8px;padding-bottom:8px}
+.TMLow .TMProgressButton,.TMLow .TMMessageButton{padding-top:2px;padding-bottom:1px;margin-left:3px;margin-right:3px}
+.TMTiny .TMProgressButton,.TMTiny .TMMessageButton{padding-top:1px;padding-bottom:0px}
+ .TMMenuMain{position:absolute;left:0px;top:0px;z-index:258}
+.TMMenuShadow{position:absolute;background:white;z-index:257;box-shadow:1px 3px 10px 1px #AAA}
+.TMMenuOuter{overflow:hidden;padding-top:10px;padding-bottom:10px}
+.TMLow .TMMenuOuter{padding-top:3px;padding-bottom:3px}
+.TMMenuHorzMain .TMMenuOuter{overflow:hidden;padding:0px 10px 0px 10px}
+.TMLow .TMMenuHorzMain .TMMenuOuter{overflow:hidden;padding:0px 3px 0px 3px}
+.TMMenuMainTop{margin-top:-4px}
+.TMMenuMainBottom{margin-top:4px}
+.TMMenuShadowTop{margin-top:-5px}
+.TMMenuShadowBottom{margin-top:3px}
+.TMMenuHeader{overflow:hidden;position:absolute;z-index:258;cursor:pointer;user-select:none;-ms-user-select:none;-o-user-select:none;-moz-user-select:none;-khtml-user-select:none;-webkit-user-select:none}
+.TMMenuHeader > div{vertical-align:middle;display:table-cell}
+.TMMenuHead{padding:7px 0px 15px 17px;text-align:left;cursor:default;margin-bottom:10px}
+.TMWide .TMMenuHead{padding-left:22px}
+.TMHigh .TMMenuHead{padding-top:15px;padding-bottom:22px;margin-bottom:15px}
+.TMLow .TMMenuHead{padding:4px 0px 7px 12px;margin-bottom:7px}
+.TMSmall .TMMenuHead{padding:3px 0px 5px 7px;margin-bottom:5px}
+.TMTiny .TMMenuHead{padding-top:0px;padding-bottom:2px;margin-bottom:2px}
+.TMMenuHeadText{white-space:nowrap;margin-right:45px}
+.TMWide .TMMenuHeadText{margin-right:60px}
+.TMLow .TMMenuHeadText{margin-right:35px}
+.TMMenuHorzOuter .TMMenuHead{padding:0px 6px 0px 6px}
+.TMMenuHorzOuter .TMMenuHeadText{margin:0px;white-space:normal;display:inline-block;writing-mode:tb-rl;-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg)}
+.TMMenuClose{float:right;width:33px;line-height:20px;cursor:pointer;display:none;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAxNSAxNSI+DQo8cGF0aCBmaWxsPSIjOTU5NTk1IiBzdHJva2U9IiM5NTk1OTUiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik00LDNsNCw0bDQtNGwxLDFMOSw4bDQsNGwtMSwxTDgsOWwtNCw0bC0xLTFsNC00TDMsNEw0LDN6Ii8+DQo8L3N2Zz4NCg==) no-repeat;background-size:16px 16px}
+.TMWide .TMMenuClose{background-size:20px 20px;width:43px}
+.TMBig .TMMenuClose{background-size:24px 24px;width:47px;background-position-y:-2px;line-height:30px}
+.TMGiant .TMMenuClose{background-position-y:0px}
+.TMLow .TMMenuClose{background-size:13px 13px;line-height:20px;width:26px;background-position-y:2px}
+.TMSmall .TMMenuClose{width:21px}
+.TMTiny .TMMenuClose{background-position-y:0px}
+.TMMenuHorzOuter .TMMenuClose{width:17px}
+.TMWide .TMMenuHorzOuter .TMMenuClose{width:23px}
+.TMBig .TMMenuHorzOuter .TMMenuClose{background-position-x:-2px}
+.TMLow .TMMenuHorzOuter .TMMenuClose{width:16px}
+.TMMenuBody{cursor:default;margin:0px 1px 0px 1px;width:calc(100% - 2px)}
+.TMMenuFoot{padding:15px 13px 7px 13px;text-align:center;white-space:nowrap;margin-top:10px}
+.TMWide .TMMenuFoot{padding-left:16px;padding-right:17px}
+.TMHigh .TMMenuFoot{padding-top:20px;padding-bottom:10px}
+.TMBig .TMMenuFoot{padding-top:25px;padding-bottom:15px}
+.TMLow .TMMenuFoot{padding:7px 8px 4px 8px;margin-top:5px}
+.TMSmall .TMMenuFoot{padding:5px 3px 2px 3px;margin-top:5px}
+.TMTiny .TMMenuFoot{padding-top:2px;padding-bottom:2px;margin-top:2px}
+ .TMMenuButton{padding:4px 5px 3px 5px;margin:3px 4px 3px 4px;min-width:70px;text-align:center;white-space:nowrap;overflow:hidden}
+.TMWide .TMMenuButton{margin-left:6px;margin-right:6px;min-width:80px}
+.TMHigh .TMMenuButton{padding-top:6px;padding-bottom:5px}
+.TMBig .TMMenuButton{padding-top:8px;padding-bottom:8px}
+.TMGiant .TMMenuButton{min-width:90px}
+.TMLow .TMMenuButton{padding:2px 2px 1px 2px;margin-top:1px;margin-bottom:1px;min-width:60px}
+.TMTiny .TMMenuButton{padding-top:1px;padding-bottom:0px}
+.TMMenuItem{margin-left:1px;margin-right:1px;padding:1px 15px 0px 15px}
+.TMWide .TMMenuItem{padding-left:20px;padding-right:20px}
+.TMLow .TMMenuItem{padding-left:10px;padding-right:10px}
+.TMSmall .TMMenuItem{padding-left:5px;padding-right:5px}
+ .TMMenuCheckedIconLeft,.TMMenuCheckedIconRight{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0xIC0xIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik0xMi40LDBIMS42QzAuNywwLDAsMC43LDAsMS42djEwLjlDMCwxMy4zLDAuNywxNCwxLjYsMTRoMTAuOWMwLjksMCwxLjYtMC43LDEuNi0xLjZWMS42QzE0LDAuNywxMy4zLDAsMTIuNCwweiBNNS40LDEwLjlMMS42LDdsMS4xLTEuMWwyLjgsMi44bDUuOS01LjlsMS4xLDEuMUw1LjQsMTAuOXoiLz4NCjwvc3ZnPg==) no-repeat}
+.TMMenuUncheckedIconLeft,.TMMenuUncheckedIconRight{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0xIC0xIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik0xMi40LDEuNnYxMC45SDEuNlYxLjZIMTIuNCBNMTIuNCwwSDEuNkMwLjcsMCwwLDAuNywwLDEuNnYxMC45QzAsMTMuMywwLjcsMTQsMS42LDE0aDEwLjljMC45LDAsMS42LTAuNywxLjYtMS42VjEuNkMxNCwwLjcsMTMuMywwLDEyLjQsMHoiLz4NCjwvc3ZnPg0K) no-repeat}
+.TMMenuCheckedRadioLeft,.TMMenuCheckedRadioRight{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0xIC0xIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik03LDMuNUM1LjEsMy41LDMuNSw1LjEsMy41LDdzMS42LDMuNSwzLjUsMy41czMuNS0xLjYsMy41LTMuNVM4LjksMy41LDcsMy41eiBNNywwQzMuMSwwLDAsMy4xLDAsN3MzLjEsNyw3LDdzNy0zLjEsNy03UzEwLjksMCw3LDB6IE03LDEyLjZjLTMuMSwwLTUuNi0yLjUtNS42LTUuNlMzLjksMS40LDcsMS40czUuNiwyLjUsNS42LDUuNlMxMC4xLDEyLjYsNywxMi42eiIvPg0KPC9zdmc+DQo=) no-repeat}
+.TMMenuUncheckedRadioLeft,.TMMenuUncheckedRadioRight{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0xIC0xIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik03LDBDMy4xLDAsMCwzLjEsMCw3czMuMSw3LDcsN3M3LTMuMSw3LTdTMTAuOSwwLDcsMHogTTcsMTIuNmMtMy4xLDAtNS42LTIuNS01LjYtNS42UzMuOSwxLjQsNywxLjRzNS42LDIuNSw1LjYsNS42UzEwLjEsMTIuNiw3LDEyLjZ6Ii8+DQo8L3N2Zz4NCg==) no-repeat}
+.TMMenuCheckedIconLeft,.TMMenuUncheckedIconLeft,.TMMenuCheckedRadioLeft,.TMMenuUncheckedRadioLeft{padding-left:20px;background-position:left center;background-size:16px 16px}
+.TMWide .TMMenuCheckedIconLeft,.TMWide .TMMenuUncheckedIconLeft,.TMWide .TMMenuCheckedRadioLeft,.TMWide .TMMenuUncheckedRadioLeft{padding-left:25px;background-size:20px 20px}
+.TMBig .TMMenuCheckedIconLeft,.TMBig .TMMenuUncheckedIconLeft,.TMBig .TMMenuCheckedRadioLeft,.TMBig .TMMenuUncheckedRadioLeft{padding-left:30px;background-size:24px 24px}
+.TMSmall .TMMenuCheckedIconLeft,.TMSmall .TMMenuUncheckedIconLeft,.TMSmall .TMMenuCheckedRadioLeft,.TMSmall .TMMenuUncheckedRadioLeft{padding-left:16px;background-size:13px 13px}
+.TMMenuCheckedIconRight,.TMMenuUncheckedIconRight,.TMMenuCheckedRadioRight,.TMMenuUncheckedRadioRight{padding-right:20px;background-position:right center;background-size:16px 16px}
+.TMWide .TMMenuCheckedIconRight,.TMWide .TMMenuUncheckedIconRight,.TMWide .TMMenuCheckedRadioRight,.TMWide .TMMenuUncheckedRadioRight{padding-right:25px;background-size:20px 20px}
+.TMBig .TMMenuCheckedIconRight,.TMBig .TMMenuUncheckedIconRight,.TMBig .TMMenuCheckedRadioRight,.TMBig .TMMenuUncheckedRadioRight{padding-right:30px;background-size:24px 24px}
+.TMSmall .TMMenuCheckedIconRight,.TMSmall .TMMenuUncheckedIconRight,.TMSmall .TMMenuCheckedRadioRight,.TMSmall .TMMenuUncheckedRadioRight{padding-right:16px;background-size:13px 13px}
+.TMMenuCursorIcon,.TMMenuHoverIcon{padding-left:0px!important}
+.TMMenuEnumCursorIcon,.TMMenuEnumHoverIcon{padding-left:6px!important}
+.TMWide .TMMenuEnumCursorIcon,.TMWide .TMMenuEnumHoverIcon{padding-left:5px!important}
+.TMBig .TMMenuEnumCursorIcon,.TMBig .TMMenuEnumHoverIcon{padding-left:13px!important}
+.TMLow .TMMenuEnumCursorIcon,.TMLow .TMMenuEnumHoverIcon{padding-left:10px!important}
+.TMSmall .TMMenuEnumCursorIcon,.TMSmall .TMMenuEnumHoverIcon{padding-left:12px!important}
+.TMMenuCursorIconRtl,.TMMenuHoverIconRtl{padding-left:0px!important}
+.TMMenuExpandedIcon{padding-left:0px!important;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik04LjgsOC4xTDUsNC4zTDEuMiw4LjFMMCw2LjlsNS01bDUsNUw4LjgsOC4xeiIvPg0KPC9zdmc+DQo=) no-repeat left center;background-size:16px 16px}
+.TMMenuCollapsedIcon{padding-left:0px!important;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik0xLjIsMS45TDUsNS43bDMuOC0zLjhMMTAsMy4xbC01LDVsLTUtNUwxLjIsMS45eiIvPg0KPC9zdmc+DQo=) no-repeat left center;background-size:16px 16px}
+.TMWide .TMMenuExpandedIcon,.TMWide .TMMenuCollapsedIcon{background-size:20px 20px}
+.TMBig .TMMenuExpandedIcon,.TMBig .TMMenuCollapsedIcon{background-size:24px 24px}
+.TMSmall .TMMenuExpandedIcon,.TMSmall .TMMenuCollapsedIcon{background-size:13px 13px}
+.TMMenuExpandedIcon > div, .TMMenuCollapsedIcon > div{background:transparent;border:0px none;padding-left:20px;text-align:left!important}
+.TMWide .TMMenuExpandedIcon > div, .TMWide .TMMenuCollapsedIcon > div{padding-left:26px}
+.TMBig .TMMenuExpandedIcon > div, .TMBig .TMMenuCollapsedIcon > div{padding-left:32px}
+.TMSmall .TMMenuExpandedIcon > div, .TMSmall .TMMenuCollapsedIcon > div{padding-left:16px}
+.TMMenuNextIcon{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik0xLjksOC44TDUuNyw1TDEuOSwxLjJMMy4xLDBsNSw1bC01LDVMMS45LDguOHoiLz4NCjwvc3ZnPg0K) no-repeat right center;background-size:16px 16px;padding-right:20px}
+.TMWide .TMMenuNextIcon{background-size:20px 20px;padding-right:26px}
+.TMBig .TMMenuNextIcon{background-size:24px 24px;padding-right:32px}
+.TMSmall .TMMenuNextIcon{background-size:13px 13px;padding-right:16px}
+.TMMenuNextIconRtl{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik04LjEsMS4yTDQuMyw1bDMuOCwzLjhMNi45LDEwbC01LTVsNS01TDguMSwxLjJ6Ii8+DQo8L3N2Zz4NCg==) no-repeat left center;background-size:16px 16px;padding-left:20px}
+.TMWide .TMMenuNextIconRtl{background-size:20px 20px;padding-left:26px}
+.TMBig .TMMenuNextIconRtl{background-size:24px 24px;padding-left:32px}
+.TMSmall .TMMenuNextIconRtl{background-size:13px 13px;padding-left:16px}
+.TMMenuNextIconDown{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik0xLjIsMS45TDUsNS43bDMuOC0zLjhMMTAsMy4xbC01LDVsLTUtNUwxLjIsMS45eiIvPg0KPC9zdmc+DQo=)}
+.TMMenuItemText{white-space:nowrap;overflow:hidden}
+.TMMenuItemText *{font-size:inherit;line-height:inherit}
+.TMMenuItemIcon{background-repeat:no-repeat;background-position:center center}
+.TMMenuItemDisabled{opacity:0.70}
+.TMMenuAlignLeft{text-align:left}
+.TMMenuAlignRight{text-align:right}
+.TMMenuAlignCenter{text-align:center}
+.TMMenuAlignJustify{text-align:justify}
+.TMMenuEnumParent{padding-left:5px}
+.TMMenuItemLeft .TMMenuEnumParent{padding-left:0px;padding-right:5px}
+.TMMenuEnum,.TMMenuEnumHeaderLeft{white-space:nowrap;overflow:hidden;background-repeat:no-repeat;background-size:16px 16px;background-position:3px center}
+.TMMenuEnum{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik0xLjIsMS45TDUsNS43bDMuOC0zLjhMMTAsMy4xbC01LDVsLTUtNUwxLjIsMS45eiIvPg0KPC9zdmc+DQo=);padding-left:22px}
+.TMMenuItemLeft .TMMenuEnum{padding-right:3px}
+.TMMenuEnumHeaderLeft{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1IDUpIiBkPSJNMS4yLDEuOUw1LDUuN2wzLjgtMy44TDEwLDMuMWwtNSw1bC01LTVMMS4yLDEuOXoiLz4NCjwvc3ZnPg0K);padding:2px 0px 0px 23px;cursor:default;background-position:4px center}
+.TMWide .TMMenuEnum,.TMWide .TMMenuEnumHeaderLeft{background-size:20px 20px;padding-left:26px}
+.TMWide .TMMenuEnumHeaderLeft{padding-left:27px}
+.TMBig .TMMenuEnum,.TMBig .TMMenuEnumHeaderLeft{background-size:24px 24px;padding-left:34px}
+.TMBig .TMMenuEnumHeaderLeft{padding-left:35px}
+.TMSmall .TMMenuEnum,.TMSmall .TMMenuEnumHeaderLeft{background-size:13px 13px;padding-left:18px}
+.TMSmall .TMMenuEnumHeaderLeft{padding-left:19px}
+.TMMenuEnumParent,.TMMenuEnum,.TMMenuEnumHeaderLeft{width:90px}
+.TMWide .TMMenuEnumParent,.TMWide .TMMenuEnum,.TMWide .TMMenuEnumHeaderLeft{width:120px}
+.TMGiant .TMMenuEnumParent,.TMGiant .TMMenuEnum,.TMGiant .TMMenuEnumHeaderLeft{width:150px}
+.TMMenuEnumMain{margin-top:0px}
+.TMMenuEditParent{padding-left:5px}
+.TMMenuItemLeft .TMMenuEditParent{padding-left:0px;padding-right:5px}
+.TMMenuEdit{padding-left:3px;padding-right:3px;overflow:hidden;white-space:nowrap}
+.TMMenuEditParent,.TMMenuEdit{width:30px}
+.TMMenuEditParentPDFName,.TMMenuEditParentPDFName > .TMMenuEdit,.TMMenuEditParentExportName,.TMMenuEditParentExportName > .TMMenuEdit{width:106px}
+.TMWide .TMMenuEditParent,.TMWide .TMMenuEdit{width:50px}
+.TMWide .TMMenuEditParentPDFName,.TMWide .TMMenuEditParentPDFName > .TMMenuEdit,.TMWide .TMMenuEditParentExportName,.TMWide .TMMenuEditParentExportName > .TMMenuEdit{width:140px}
+.TMBig .TMMenuEditParentPDFName,.TMBig .TMMenuEditParentPDFName > .TMMenuEdit,.TMBig .TMMenuEditParentExportName,.TMBig .TMMenuEditParentExportName > .TMMenuEdit{width:148px}
+.TMGiant .TMMenuEditParent,.TMGiant .TMMenuEdit{width:60px}
+.TMGiant .TMMenuEditParentPDFName,.TMGiant .TMMenuEditParentPDFName > .TMMenuEdit,.TMGiant .TMMenuEditParentExportName,.TMGiant .TMMenuEditParentExportName > .TMMenuEdit{width:178px}
+.TMSmall .TMMenuEditParentPDFName,.TMSmall .TMMenuEditParentPDFName > .TMMenuEdit,.TMSmall .TMMenuEditParentExportName,.TMSmall .TMMenuEditParentExportName > .TMMenuEdit{width:102px}
+.TMMenuEditMulti{white-space:pre-wrap}
+input.TMMenuEditInput,textarea.TMMenuEditTextarea{border:0px none;margin:0px 1px 0px 0px;padding:0px;height:18px;outline:none;background:transparent;resize:none}
+.TMHigh .TMMenuEditInput,.TMHigh .TMMenuEditTextarea{height:22px}
+.TMGiant .TMMenuEditInput,.TMGiant .TMMenuEditTextarea{height:30px}
+.TMSmall .TMMenuEditInput,.TMSmall .TMMenuEditTextarea{height:15px}
+.TMMenuEditInput::-ms-clear{height:13px}
+.TMMenuEditInt,.TMMenuEditFloat,.TMMenuEditDate{text-align:right}
+ .TMMenuCaption{padding:4px 2px 3px 2px}
+.TMHigh .TMMenuCaption{padding-top:8px;padding-bottom:7px}
+.TMMenuSeparator{margin:10px 15px 10px 15px;height:0px;overflow:hidden}
+.TMLow .TMMenuSeparator{margin:5px}
+.TMTiny .TMMenuSeparator{margin-top:2px;margin-bottom:2px}
+.TMMenuHorz .TMMenuSeparator{margin:0px;border:15px solid white;border-left:10px solid white;border-right:10px solid white}
+.TMLow .TMMenuHorz .TMMenuSeparator{border-width:5px}
+.TMTiny .TMMenuHorz .TMMenuSeparator{border-left-width:2px;border-right-width:2px}
+.TMMenuHorz .TMMenuSeparator > div{overflow:hidden;width:1px}
+.TMMenuVSeparator{width:0px;font-size:0px}
+ .TMPickMain{position:absolute;left:0px;top:0px;z-index:258}
+.TMPickOuter{border:0px none;padding:0px;overflow:hidden}
+.TMPickBody{cursor:default;padding:0px;margin:0px;width:100%}
+.TMWide .TMPickBody{margin:0px}
+.TMPickHeader{position:absolute;z-index:258;border:1px solid #ABD7D3;background:white;overflow:hidden;cursor:pointer;}
+.TMPickHeaderBottom{border-bottom:0px none}
+.TMPickHeaderTop{border-top:0px none}
+.TMPickHead,.TMPickFoot{background:white;padding:1px 0px 1px 5px;color:white;cursor:default}
+.TMPickClose{display:none}
+.TMPickMY{padding:8px 0px 13px 0px;cursor:default;text-align:center;margin-top:6px}
+.TMHigh .TMPickMY{padding-top:11px;padding-bottom:23px;margin-top:12px}
+.TMBig .TMPickMY{padding-top:16px;padding-bottom:30px;margin-top:14px}
+.TMLow .TMPickMY{padding-top:4px;padding-bottom:5px;margin-top:2px}
+.TMPickMYDown{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiM3RjdGN0YiIGQ9Ik0xLjIsMS45TDUsNS43bDMuOC0zLjhMMTAsMy4xbC01LDVsLTUtNUwxLjIsMS45eiIvPg0KPC9zdmc+DQo=)}
+.TMPickMYUp{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiM3RjdGN0YiIGQ9Ik04LjgsOC4xTDUsNC4zTDEuMiw4LjFMMCw2LjlsNS01bDUsNUw4LjgsOC4xeiIvPg0KPC9zdmc+DQo=)}
+.TMPickMYDown,.TMPickMYUp{padding-right:18px;background-size:16px 16px;background-position:right center;background-repeat:no-repeat;cursor:pointer}
+.TMWide .TMPickMYDown,.TMWide .TMPickMYUp{padding-right:22px;background-size:20px 20px}
+.TMBig .TMPickMYDown,.TMBig .TMPickMYUp{padding-right:26px;background-size:24px 24px}
+.TMLow .TMPickMYDown,.TMLow .TMPickMYUp{padding-right:15px;background-size:13px 13px}
+.TMPickMYRtl{padding-right:0px;padding-left:13px}
+.TMPickBL{float:left;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik04LjEsMS4yTDQuMyw1bDMuOCwzLjhMNi45LDEwbC01LTVsNS01TDguMSwxLjJ6Ii8+DQo8L3N2Zz4NCg==) no-repeat 5px 8px}
+.TMPickBR{float:right;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik0xLjksOC44TDUuNyw1TDEuOSwxLjJMMy4xLDBsNSw1bC01LDVMMS45LDguOHoiLz4NCjwvc3ZnPg0K) no-repeat right 5px top 8px}
+.TMPickBL,.TMPickBR{width:24px;height:24px;background-size:16px 16px;padding:0px;overflow:hidden;cursor:pointer;display:none}
+.TMWide .TMPickBL,.TMWide .TMPickBR{background-size:20px 20px;background-position-y:8px;height:31px}
+.TMHigh .TMPickBL,.TMHigh .TMPickBR{background-position-y:11px;height:34px}
+.TMBig .TMPickBL,.TMBig .TMPickBR{background-size:24px 24px;background-position-y:14px;height:39px}
+.TMGiant .TMPickBL,.TMGiant .TMPickBR{background-position-y:17px;height:42px}
+.TMLow .TMPickBL,.TMLow .TMPickBR{background-size:13px 13px;background-position-y:6px;height:20px}
+.TMPickTableParent{border-top:0px none;clear:both;padding:0px 5px 10px 5px}
+.TMHigh .TMPickTableParent{padding-bottom:20px}
+.TMTiny .TMPickTableParent{padding-bottom:3px}
+.TMPickTable{table-layout:fixed;width:0px}
+.TMPickRow{background:white}
+.TMPickCell{width:28px;font-size:inherit;line-height:inherit}
+.TMWide .TMPickCell{width:36px}
+.TMGiant .TMPickCell{width:42px}
+.TMPickWDN{margin:2px 3px 2px 3px;padding:1px;line-height:18px;text-align:center;cursor:default}
+.TMHigh .TMPickWDN{line-height:30px}
+.TMPickHover,.TMPickSelHover,.TMPickWD,.TMPickSa,.TMPickSu,.TMPickSel,.TMPickNow,.TMPickWDNE,.TMPickSaNE,.TMPickSuNE,.TMPickSelNE,.TMPickNowNE,.TMPickOM,.TMPickOMNE{margin:1px;padding:1px 3px 1px 3px;line-height:18px;text-align:center;cursor:pointer;}
+.TMPickWN,.TMPickWNE{padding:2px 4px 2px 4px;line-height:18px;text-align:center;cursor:pointer}
+.TMHigh .TMPickCell>div{line-height:26px}
+.TMBig .TMPickCell>div{line-height:30px}
+.TMLow .TMPickCell>div{line-height:14px}
+.TMPickWNE{cursor:default}
+.TMPickNE{cursor:default}
+.TMPickEmpty{background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiM3RjdGN0YiIGQ9Ik04LjUsMUg4VjBIN3YxSDNWMEgydjFIMS41Yy0wLjYsMC0xLDAuNS0xLDF2N2MwLDAuNiwwLjQsMSwxLDFoN2MwLjYsMCwxLTAuNCwxLTFWMkM5LjUsMS41LDksMSw4LjUsMXogTTguNSw5aC03VjMuNWg3Vjl6Ii8+DQo8L3N2Zz4NCg==) no-repeat center center;background-size:16px 16px;cursor:pointer;height:17px}
+.TMWide .TMPickEmpty{background-size:20px 20px;height:20px}
+.TMBig .TMPickEmpty{background-size:24px 24px;height:24px}
+.TMLow .TMPickEmpty{background-size:13px 13px;height:13px}
+.TMPick2TableParent{padding:2px 5px 7px 5px;display:block;overflow:hidden;clear:both}
+.TMHigh .TMPick2TableParent{padding-bottom:12px}
+.TMBig .TMPick2TableParent{padding-bottom:11px}
+.TMTiny .TMPick2TableParent{padding-bottom:0px}
+.TMPick2Table{table-layout:fixed;width:0px;margin-left:3px;margin-right:3px}
+.TMPick2CellM{width:67px}
+.TMLow .TMPick2CellM{width:68px}
+.TMWide .TMPick2CellM{width:87px}
+.TMGiant .TMPick2CellM{width:105px}
+.TMPick2CellY{width:40px}
+.TMLow .TMPick2CellY{width:40px}
+.TMWide .TMPick2CellY{width:50px}
+.TMGiant .TMPick2CellY{width:58px}
+.TMPick2CellSep{width:5px}
+.TMLow .TMPick2CellSep{width:2px}
+.TMPick2SepH{display:none}
+.TMPick2M,.TMPick2Y{margin:2px;padding:3px 1px 3px 1px;line-height:17px;cursor:pointer;text-align:center;overflow:hidden}
+.TMBig .TMPick2M,.TMBig .TMPick2Y{line-height:26px}
+.TMLow .TMPick2M,.TMLow .TMPick2Y{line-height:16px;padding-top:1px;padding-bottom:1px}
+.TMPick2Sep{height:27px;width:1px;overflow:hidden;margin-left:2px;margin-right:2px}
+.TMHigh .TMPick2Sep{height:37px}
+.TMBig .TMPick2Sep{height:42px}
+.TMLow .TMPick2Sep{height:22px}
+.TMPick2BL,.TMPick2BR{width:40px;cursor:pointer;height:27px;background-repeat:no-repeat;background-position:center 7px;background-size:16px 16px}
+.TMPick2BL{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik04LjEsMS4yTDQuMyw1bDMuOCwzLjhMNi45LDEwbC01LTVsNS01TDguMSwxLjJ6Ii8+DQo8L3N2Zz4NCg==)}
+.TMPick2BR{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik0xLjksOC44TDUuNyw1TDEuOSwxLjJMMy4xLDBsNSw1bC01LDVMMS45LDguOHoiLz4NCjwvc3ZnPg0K)}
+.TMWide .TMPick2BL,.TMWide .TMPick2BR{width:50px;background-position:center 5px;background-size:20px 20px}
+.TMHigh .TMPick2BL,.TMHigh .TMPick2BR{height:38px;background-position:center 10px}
+.TMBig .TMPick2BL,.TMBig .TMPick2BR{height:41px;background-position:center 10px;background-size:24px 24px}
+.TMGiant .TMPick2BL,.TMGiant .TMPick2BR{width:58px}
+.TMLow .TMPick2BL,.TMLow .TMPick2BR{height:24px;width:40px;background-position:center 6px;background-size:13px 13px}
+ .TMPickTimeCell{padding:13px 14px 13px 0px;margin-top:-1px;text-align:right;line-height:0px;height:15px}
+.TMWide .TMPickTimeCell{height:19px;padding-right:17px}
+.TMHigh .TMPickTimeCell{padding-top:18px;padding-bottom:18px}
+.TMBig .TMPickTimeCell{padding-top:26px;padding-bottom:25px}
+.TMGiant .TMPickTimeCell{height:23px}
+.TMLow .TMPickTimeCell{padding-top:9px;padding-bottom:9px;padding-right:10px}
+.TMTiny .TMPickTimeCell{padding-top:5px;padding-bottom:5px}
+.TMPickTime{margin:0px;padding:0px;border:0px none;white-space:nowrap;text-align:right;outline:none;background:transparent}
+.TMPickFooter,.TMPick2Footer{padding:7px 0px 7px 0px;cursor:default;text-align:center;margin-top:-1px}
+.TMHigh .TMPickFooter,.TMHigh .TMPick2Footer{padding-top:10px;padding-bottom:10px}
+.TMBig .TMPickFooter,.TMBig .TMPick2Footer{padding-top:15px;padding-bottom:15px}
+.TMLow .TMPickFooter,.TMLow .TMPick2Footer{padding-top:7px;padding-bottom:5px}
+.TMTiny .TMPickFooter,.TMTiny .TMPick2Footer{padding-top:4px;padding-bottom:2px}
+.TMPickButton{padding:4px 7px 3px 7px;margin:1px 5px 1px 4px;width:50px;text-align:center;white-space:nowrap;overflow:hidden}
+.TMWide .TMPickButton{width:68px}
+.TMHigh .TMPickButton{padding-top:6px;padding-bottom:5px}
+.TMBig .TMPickButton{padding-top:8px;padding-bottom:8px}
+.TMGiant .TMPickButton{width:85px}
+.TMLow .TMPickButton{padding-top:2px;padding-bottom:1px;width:52px;margin-left:3px;margin-right:3px}
+.TMTiny .TMPickButton{padding-top:1px;padding-bottom:0px}
+.TMEditParent{position:absolute;z-index:258;overflow:hidden}
+.TMEdit,.TMEditInline{padding:2px 4px 2px 4px;border:1px solid #DDD;border-top:1px solid #666;border-left:1px solid #666;background:white;white-space:nowrap;overflow:hidden;}
+.TMEditInline{display:inline-block;vertical-align:bottom}
+.TMEditMulti{white-space:pre-wrap}
+.TMEnumControl,.TMEnumInline,.TMEnumHeader{cursor:pointer;background:white url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9Ii0zIC0zIDE2IDE2Ij4NCjxwYXRoIGZpbGw9IiMyMTk2RjMiIGQ9Ik0xLjIsMS45TDUsNS43bDMuOC0zLjhMMTAsMy4xbC01LDVsLTUtNUwxLjIsMS45eiIvPg0KPC9zdmc+DQo=) no-repeat;background-size:16px 16px}
+.TMEnumControl,.TMEnumInline{background-position:2px 5px;padding:2px 4px 2px 20px;border:1px solid #DDD;border-top:1px solid #666;border-left:1px solid #666;overflow:hidden}
+.TMEnumInline{display:inline-block;vertical-align:bottom}
+.TMEnumHeader{background-position:3px 6px;padding:4px 4px 2px 21px}
+.TMMouseOrig{background:yellow!important;opacity:0.5}
+.TMMouseDragObject{position:absolute;z-index:260;background:#888;opacity:0.5}
+.TMFocus{border:1px solid #AAF;border-top:1px solid #00F;border-left:1px solid #00F;background-color:#EEE}
+ .TMTipMain{position:absolute;left:0px;top:0px;z-index:262;visibility:hidden}
+.TMTipOuter{padding:5px;overflow:hidden;cursor:default}
+.TMTipBody{white-space:nowrap;overflow:hidden}
+.TMTipShadow{position:absolute;display:none}
+.TMDragObject{z-index:300;margin-left:15px;margin-top:10px;padding:5px}
+.TMChart{padding:5px}
+.TMChartInner{background:white;width:100%}
+.TMChartLayer{overflow:hidden;height:1000px}
+.TMChartAxisY{background:black;height:1px;overflow:hidden}
+.TMChartAxisYLabel{overflow:hidden}
+.TMChartAxisYText{margin-right:5px;margin-top:12px;text-align:right}
+.TMChartAxisX{width:1px;overflow:hidden;background:black}
+.TMChartAxisXLabel{overflow:hidden}
+.TMChartAxisXText{text-align:center}
+.TMChartCaption{text-align:center;margin-top:3px}
+.TMChartPoint{background-repeat:no-repeat;background-size:9px 9px;background-position:11px 11px;width:32px;height:32px;overflow:hidden}
+.TMChartPoint1{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8bGluZSBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iNCIgeDE9IjMiIHkxPSIzIiB4Mj0iMjEiIHkyPSIyMSIvPg0KPGxpbmUgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjQiIHgxPSIyMSIgeTE9IjMiIHgyPSIzIiB5Mj0iMjEiLz4NCjwvc3ZnPg0K)}
+.TMChartPoint2{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8bGluZSBzdHJva2U9IiNjMDAiIHN0cm9rZS13aWR0aD0iNCIgeDE9IjMiIHkxPSIzIiB4Mj0iMjEiIHkyPSIyMSIvPg0KPGxpbmUgc3Ryb2tlPSIjYzAwIiBzdHJva2Utd2lkdGg9IjQiIHgxPSIyMSIgeTE9IjMiIHgyPSIzIiB5Mj0iMjEiLz4NCjwvc3ZnPg==)}
+.TMChartPoint3{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8bGluZSBzdHJva2U9IiMzOWYiIHN0cm9rZS13aWR0aD0iNCIgeDE9IjMiIHkxPSIzIiB4Mj0iMjEiIHkyPSIyMSIvPg0KPGxpbmUgc3Ryb2tlPSIjMzlmIiBzdHJva2Utd2lkdGg9IjQiIHgxPSIyMSIgeTE9IjMiIHgyPSIzIiB5Mj0iMjEiLz4NCjwvc3ZnPg==)}
+.TMChartPoint4{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8bGluZSBzdHJva2U9IiMwOTAiIHN0cm9rZS13aWR0aD0iNCIgeDE9IjMiIHkxPSIzIiB4Mj0iMjEiIHkyPSIyMSIvPg0KPGxpbmUgc3Ryb2tlPSIjMDkwIiBzdHJva2Utd2lkdGg9IjQiIHgxPSIyMSIgeTE9IjMiIHgyPSIzIiB5Mj0iMjEiLz4NCjwvc3ZnPg==)}
+.TMChartPoint5{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8bGluZSBzdHJva2U9IiNjMGMiIHN0cm9rZS13aWR0aD0iNCIgeDE9IjMiIHkxPSIzIiB4Mj0iMjEiIHkyPSIyMSIvPg0KPGxpbmUgc3Ryb2tlPSIjYzBjIiBzdHJva2Utd2lkdGg9IjQiIHgxPSIyMSIgeTE9IjMiIHgyPSIzIiB5Mj0iMjEiLz4NCjwvc3ZnPg==)}
+.TMChartPoint6{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8bGluZSBzdHJva2U9IiM4ODAiIHN0cm9rZS13aWR0aD0iNCIgeDE9IjMiIHkxPSIzIiB4Mj0iMjEiIHkyPSIyMSIvPg0KPGxpbmUgc3Ryb2tlPSIjODgwIiBzdHJva2Utd2lkdGg9IjQiIHgxPSIyMSIgeTE9IjMiIHgyPSIzIiB5Mj0iMjEiLz4NCjwvc3ZnPg==)}
+.TMChartPoint7{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8bGluZSBzdHJva2U9IiMzY2MiIHN0cm9rZS13aWR0aD0iNCIgeDE9IjMiIHkxPSIzIiB4Mj0iMjEiIHkyPSIyMSIvPg0KPGxpbmUgc3Ryb2tlPSIjM2NjIiBzdHJva2Utd2lkdGg9IjQiIHgxPSIyMSIgeTE9IjMiIHgyPSIzIiB5Mj0iMjEiLz4NCjwvc3ZnPg==)}
+.TMChartPoint8{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8bGluZSBzdHJva2U9IiNjY2MiIHN0cm9rZS13aWR0aD0iNCIgeDE9IjMiIHkxPSIzIiB4Mj0iMjEiIHkyPSIyMSIvPg0KPGxpbmUgc3Ryb2tlPSIjY2NjIiBzdHJva2Utd2lkdGg9IjQiIHgxPSIyMSIgeTE9IjMiIHgyPSIzIiB5Mj0iMjEiLz4NCjwvc3ZnPg==)}
+.GridDebugTag,.GridDebugTagMax{overflow:auto;overflow-y:scroll;border:1px solid black;background:#DDD}
+.GridDebugTag,.GridDebugTagMax,.GridDebugButtons,.GridDebugButtonsMax{position:fixed;z-index:256;left:5px;right:5px;bottom:5px;height:200px;padding:4px}
+.GridDebugTagMax,.GridDebugButtonsMax{top:5px;height:auto}
+.GridDebugButtons,.GridDebugButtonsMax{text-align:right;margin-right:25px;width:150px;left:auto}
+.GridDebugButton{font-size:10px;width:40px;padding:0px}
+.GridDebugTitle{font-size:10px;color:#2196F3;font-style:normal;font-weight:normal}
+.GridDebugMark{font-weight:bold}
+.GridDebugStop{font-size:18px;font-weight:bold;color:red}
+.GridDebugError{font-size:12px;color:red}
+.GridDebugWarning{font-size:12px;color:#A60}
+.GridDebugList{font-size:10px;color:#888}
+.GridDebugInfo{font-size:12px}
+.TMAnimateOverflow{overflow:hidden}
+@keyframes TMExpandH{from{height:0px}
+ }
+@keyframes TMCollapseH{to{height:0px}
+ }
+.TMAnimateTransparent{opacity:0}
+@keyframes TMShow{from{opacity:0}
+ to{opacity:1}
+ }
+@keyframes TMHide{from{opacity:1}
+ to{opacity:0}
+ }
+.TMAnimateHidden{display:none}
+.TMAnimateVisible{display:inherit}
+.TMAnimateLeftTop{overflow:hidden;transform-origin:0% 0%}
+.TMAnimateCenterTop{overflow:hidden;transform-origin:50% 0%}
+.TMAnimateRightTop{overflow:hidden;transform-origin:100% 0%}
+.TMAnimateLeftBottom{overflow:hidden;transform-origin:0% 100%}
+.TMAnimateRightBottom{overflow:hidden;transform-origin:100% 100%}
+.TMAnimateCenterBottom{overflow:hidden;transform-origin:50% 100%}
+.TMAnimateLeftCenter{overflow:hidden;transform-origin:0% 50%}
+.TMAnimateRightCenter{overflow:hidden;transform-origin:100% 50%}
+.TMAnimateCenterCenter{overflow:hidden;transform-origin:50% 50%}
+@keyframes TMZoomInH{from{height:0px;transform:scale(1,0)}
+ to{transform:scale(1,1)}
+ }
+@keyframes TMZoomOutH{from{transform:scale(1,1)}
+ to{transform:scale(1,0);height:0px}
+ }
+@keyframes TMZoomInY{from{transform:scale(1,0)}
+ to{transform:scale(1,1)}
+ }
+@keyframes TMZoomOutY{from{transform:scale(1,1)}
+ to{transform:scale(1,0)}
+ }
+@keyframes TMZoomInX{from{transform:scale(0,1)}
+ to{transform:scale(1,1)}
+ }
+@keyframes TMZoomOutX{from{transform:scale(1,1)}
+ to{transform:scale(0,1)}
+ }
+@keyframes TMZoomIn{from{transform:scale(0)}
+ to{transform:scale(1)}
+ }
+@keyframes TMZoomOut{from{transform:scale(1)}
+ to{transform:scale(0)}
+ }
+@keyframes TMRotateX90{0%{transform:rotateX(0deg)}
+ 50%{transform:rotateX(90deg)}
+ 100%{transform:rotateX(0deg)}
+ }
+@keyframes TMRotateX90To{from{transform:rotateX(0deg)}
+ to{transform:rotateX(90deg)}
+ }
+@keyframes TMRotateX90From{from{transform:rotateX(90deg)}
+ to{transform:rotateX(0deg)}
+ }
+@keyframes TMRotateY90{0%{transform:rotateY(0deg)}
+ 50%{transform:rotateY(90deg)}
+ 100%{transform:rotateY(0deg)}
+ }
+@keyframes TMRotateY90To{from{transform:rotateY(0deg)}
+ to{transform:rotateY(90deg)}
+ }
+@keyframes TMRotateY90From{from{transform:rotateY(90deg)}
+ to{transform:rotateY(0deg)}
+ }
+@keyframes TMFocus{0%{color:inherit}
+ 50%{color:red}
+ 100%{color:inherit}
+ }
+@keyframes TMCopy{0%{transform:translateX(0px)}
+ 25%{transform:translateX(1px)}
+ 75%{transform:translateX(-1px)}
+ 100%{transform:translateX(0px)}
+ }
+@keyframes TMOpacityBlink{0%{opacity:1}
+ 50%{opacity:0.2}
+ 100%{opacity:1}
+ }
+@keyframes TMBackgroundBlink{0%{background-color:#FFF}
+ 50%{background-color:#888}
+ 100%{background-color:#FFF}
+ }
+.TMMark{background-color:#AAA!important}
+@keyframes TMMark{0%{background-color:#FFF}
+ 25%{background-color:#AAA}
+ 75%{background-color:#AAA}
+ 100%{background-color:#FFF}
+ }
+@keyframes TMHighlight{0%{background-color:#FFF}
+ 25%{background-color:#AAA}
+ 50%{background-color:#FFF}
+ 75%{background-color:#AAA}
+ 100%{background-color:#FFF}
+ }
+@keyframes TMHighlightDeselect{0%{background-color:#FFF}
+ 25%{background-color:#FF0}
+ 50%{background-color:#FFF}
+ 75%{background-color:#FF0}
+ 100%{background-color:#FFF}
+ }
+@keyframes TMHighlightSelect{0%{background-color:#FF0}
+ 25%{background-color:#FFF}
+ 50%{background-color:#FF0}
+ 75%{background-color:#FFF}
+ 100%{background-color:#FF0}
+ }
+@keyframes TMHighlightDelete{0%{background-color:#FAA}
+ 25%{background-color:#FFF}
+ 50%{background-color:#FAA}
+ 75%{background-color:#FFF}
+ 100%{background-color:#FAA}
+ }
+@keyframes TMHighlightMove{0%{background-color:#AEE}
+ 25%{background-color:#FFF}
+ 50%{background-color:#AEE}
+ 75%{background-color:#FFF}
+ 100%{background-color:#AEE}
+ }
+@keyframes TMHighlightAdd{0%{background-color:#AFA}
+ 25%{background-color:#FFF}
+ 50%{background-color:#AFA}
+ 75%{background-color:#FFF}
+ 100%{background-color:#AFA}
+ }
+@keyframes TMHighlightChange{0%{background-color:#AAF}
+ 25%{background-color:#FFF}
+ 50%{background-color:#AAF}
+ 75%{background-color:#FFF}
+ 100%{background-color:#AAF}
+ }
+.GridDisabled{position:absolute;z-index:256;background:white;opacity:0.5}
+ .TMDialogLoaded{border:1px solid black!important}

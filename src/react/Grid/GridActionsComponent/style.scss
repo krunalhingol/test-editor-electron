@@ -1,0 +1,22 @@
+.grid-actions {
+  display: inline-flex;
+  .undo-redo-ops,
+  .view-ops {
+    display: flex;
+    button {
+      display: inline-flex;
+      .img {
+        width: 15px;
+        margin-right: 0;
+      }
+    }
+  }
+  .vl {
+    width: 0px;
+    border: 1px solid #666666;
+    opacity: 0.4;
+  }
+  button.btn-link:hover {
+    background-color: rgb(244, 244, 244);
+  }
+}
