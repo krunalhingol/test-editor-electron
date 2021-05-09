@@ -3,11 +3,36 @@ import { checkIfRowValueIsEmpty, getNewRowId } from "./utils";
 import update from "immutability-helper";
 import { toast } from "react-toastify";
 import { testCaseConstants } from "../../appConstants";
-const store = {};
-const tcGridActions = {};
-const appAction = {};
-const taskGridActions = {};
-const getProjectId = () => 'test';
+const store = {
+  state: {
+    testCaseGrid: {
+      reusedTasks: {},
+      stepDict: {},
+      gridData: {},
+      treeGridParsed: false,
+    },
+    testCasesLeftPanel: {
+      selectedStoryId: "story_id",
+      testCaseDetails: {
+        tcId: "tc_id",
+        updatedAt: "date_Date",
+      },
+    },
+  },
+  setReusedTasks: function (reusedTasks) {
+    this.state.testCaseGrid.reusedTasks = reusedTasks;
+  },
+  setStepDictionary: function (stepDict) {
+    this.state.testCaseGrid.stepDict = stepDict;
+  },
+  setIsTreeGridParsed: function () {
+    this.state.testCaseGrid.parsed = true;
+  },
+  getState: function () {
+    return this.state;
+  },
+};
+const getProjectId = () => "test_project_id";
 
 export const goToLine = (value) => {
   const lineNoEleValue =
@@ -585,7 +610,7 @@ const setOperation = (node, isDeleted) => {
           },
         },
       });
-      store.dispatch(tcGridActions.setStepDictionary(stepDict));
+      store.setStepDictionary(stepDict);
     }
     if (reusedTasks && reusedTasks[node.stepId] != undefined) {
       update(reusedTasks, {
@@ -595,7 +620,7 @@ const setOperation = (node, isDeleted) => {
           },
         },
       });
-      store.dispatch(tcGridActions.setReusedTasks(reusedTasks));
+      store.setReusedTasks(reusedTasks);
     }
     if (oldNode === undefined) {
       return { op: operations.create };
@@ -690,7 +715,7 @@ const getTestCaseParsedData = (parsedData = false) => {
 const getParsedStepDictionary = (parsed = false, gridData = null) => {
   if (!parsed) {
     const stepDict = getStepDictFromTree(gridData);
-    store.dispatch(tcGridActions.setStepDictionary(stepDict));
+    store.setStepDictionary(stepDict);
   }
 };
 
@@ -715,35 +740,17 @@ export const saveTCGridData = () => {
 
   const { testCaseGrid, testCasesLeftPanel } = store.getState();
   const { gridData, treeGridParsed = false } = testCaseGrid;
-  const { testCaseDetails } = testCasesLeftPanel;
-  const isTestCaseCanBeSaved =
-    testCaseGrid.isTCLocked ||
-    !testCaseDetails.tcId ||
-    testCaseDetails.tcId.startsWith("temp#");
-  if (!isTestCaseCanBeSaved) {
-    store.dispatch(appAction.disableLoader());
-    toast.info(
-      "You cannot save this TestCase. You first need to acquire the Test Case lock or Edit Test Case."
-    );
-    return;
-  }
   const gridDataCopy = JSON.parse(JSON.stringify(gridData));
   getParsedStepDictionary(treeGridParsed, gridDataCopy);
   let testCase = {};
-  setTimeout(() => {
-    testCase = getTestCaseParsedData(treeGridParsed);
-    if (testCase) {
-      store.dispatch(appAction.startLoader());
-      testCase = getSanitizedTestCaseObject(testCase);
-      store.dispatch(tcGridActions.setIsTreeGridParsed(testCase));
-      const testCaseInputObject = {
-        gridData: testCase,
-        projectId: getProjectId(),
-        selectedStoryId: testCasesLeftPanel.selectedStoryId,
-      };
-      if (isTestCaseCanBeSaved) {
-        store.dispatch(tcGridActions.sendGridDataToApi(testCaseInputObject));
-      }
-    }
-  }, 200);
+  testCase = getTestCaseParsedData(treeGridParsed);
+  if (testCase) {
+    testCase = getSanitizedTestCaseObject(testCase);
+    const testCaseInputObject = {
+      gridData: testCase,
+      projectId: getProjectId(),
+      selectedStoryId: testCasesLeftPanel.selectedStoryId,
+    };
+    console.log("testCaseInputObject", testCaseInputObject);
+  }
 };

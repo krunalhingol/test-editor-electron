@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { addRow, deleteRow, OnCanDrop, onClick, onKeyUp, onRenderFinish, onStartDrag, onStartEdit } from './Grid/commonGridEvents';
-import { goToLine, hideGoToLine } from './Grid/commonGridOperations';
+import { goToLine, hideGoToLine, saveTCGridData } from './Grid/commonGridOperations';
 import { reloadGridData } from './Grid/loadTestCaseUtils';
 import { GRID_TYPES } from './Grid/RowDef';
 
@@ -22,6 +22,7 @@ class App extends Component {
   render() {
     return (
       <div className="App" id="page-wrapper">
+        <button onClick={saveTCGridData}>Save Data</button>
         <div id="treeGridWrapper" className='tree-grid-wrapper' />
       </div>
     );
