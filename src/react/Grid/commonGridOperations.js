@@ -679,33 +679,6 @@ export const setAttribute = (row, col, attribute, val, refresh, undo) => {
   window.treeGrid.SetAttribute(row, col, attribute, val, refresh, undo);
 };
 
-export const setSelectedObjectValue = (selectedObj) => {
-  window.treeGrid.StartUndo();
-  const { testCaseGrid } = store.getState();
-  const { objectId = "", name = "" } = selectedObj || {};
-  const { selectObjectGridData } = testCaseGrid;
-  const { row, grid, col } = selectObjectGridData;
-  setValue(row, col, name, true);
-  setAttribute(
-    selectObjectGridData.row,
-    selectObjectGridData.col,
-    "Id",
-    objectId || "",
-    1,
-    1
-  );
-  const gridDataValue = {
-    grid: "",
-    col: "",
-    row: "",
-  };
-  store.dispatch(tcGridActions.setShowModalSelectObject(false));
-  store.dispatch(tcGridActions.setSelectObjectGridData(gridDataValue));
-  window.Grids.OnAfterValueChanged &&
-    window.Grids.OnAfterValueChanged(grid, row, col, name);
-  window.treeGrid.EndUndo();
-};
-
 const getTestCaseParsedData = (parsedData = false) => {
   if (parsedData) {
     return parsedData;
@@ -774,34 +747,4 @@ export const saveTCGridData = () => {
     }
   }, 200);
 };
-
-export const saveTaskGridData = () => {
-  if (checkForEmptyValues()) {
-    return;
-  }
-  const { testCaseGrid, taskLeftPanelReducer } = store.getState();
-
-  const { taskDetails } = taskLeftPanelReducer;
-  const gridDataCopy = JSON.parse(JSON.stringify(taskDetails));
-  const stepDict = getStepDictFromTree(gridDataCopy);
-  store.dispatch(tcGridActions.setStepDictionary(stepDict));
-  let taskData = {};
-  setTimeout(() => {
-    taskData = getTaskDataFromTreeGrid();
-    if (taskData) {
-      store.dispatch(appAction.startLoader());
-      const taskInputObject = {
-        gridData: taskData,
-        projectId: getProjectId(),
-      };
-      if (testCaseGrid.isTaskLocked || taskData.stepId.startsWith("temp#")) {
-        store.dispatch(taskGridActions.sendGridDataToApi(taskInputObject));
-      } else {
-        store.dispatch(appAction.disableLoader());
-        toast.info(
-          "You cannot save this Task. You first need to acquire the Task lock or Edit Task."
-        );
-      }
-    }
-  }, 200);
-};
+-
