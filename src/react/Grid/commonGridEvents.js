@@ -56,8 +56,6 @@ export const onKeyUp = (grid, key, event, name, prefix) => {
     window.treeGrid.ActionAcceptEdit();
     window.treeGrid.gridType === GRID_TYPES.TEST_CASE &&
       commonGridOperations.saveTCGridData();
-    window.treeGrid.gridType === GRID_TYPES.TASK &&
-      commonGridOperations.saveTaskGridData();
   } else if (event.altKey && keyCode === 79) {
     selectedRow.Def.rowType === stepTypes.taskStep &&
       onStartEdit(grid, selectedRow, "object");
