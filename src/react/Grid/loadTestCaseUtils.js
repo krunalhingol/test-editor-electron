@@ -1,8 +1,8 @@
 import { bodyTemplate } from './RowTemplates';
 import { GRID_TYPES } from './RowDef';
 const constants = require('./RowDef');
-const addIcon = '<i class="fa fa-plus blackPlus"></i>';
-const removeIcon = '<i class="fa redMinus"></i>';
+const addIcon = '<i class="fa fa-plus"></i>';
+const removeIcon = '<i class="fa fa-minus"></i>';
 
 /**
  * Format json data return in API response in TreeGrid json format to render data in grid.
